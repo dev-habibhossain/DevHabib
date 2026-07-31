@@ -7,7 +7,7 @@ export function About() {
       className="max-w-7xl mx-auto px-8 py-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
     >
       {/* Left Cutout Card */}
-      <div className="lg:col-span-5 flex justify-center relative">
+      <div className="lg:col-span-5 flex justify-center relative" data-aos="fade-right">
         <div className="relative w-72 h-80 sm:w-80 sm:h-96 bg-[#FF7070]/80 rounded-[40px] flex items-end justify-center">
           {/* ABOUT PORTRAIT IMAGE */}
           <div className="relative w-full h-full overflow-hidden rounded-[40px]">
@@ -25,12 +25,9 @@ export function About() {
       </div>
 
       {/* Right Narrative */}
-      <div className="lg:col-span-7 space-y-6">
-        <span className="text-[#3EB489] font-bold text-xs uppercase tracking-wider">
-          About Me
-        </span>
+      <div className="lg:col-span-7 space-y-6" data-aos="fade-left">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">
-          Passionate Full Stack Developer
+          About Me
         </h2>
 
         <p className="text-[#9ca3af] text-sm sm:text-base leading-relaxed max-w-xl">

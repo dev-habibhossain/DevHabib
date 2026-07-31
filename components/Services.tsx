@@ -14,7 +14,7 @@ export function Services() {
   return (
     <section id="services" className="bg-skew-section py-28 my-10">
       <div className="max-w-7xl mx-auto px-8">
-        <div className="text-center max-w-xl mx-auto mb-12">
+        <div className="text-center max-w-xl mx-auto mb-12" data-aos="fade-up">
           <span className="text-[#3EB489] font-bold text-xs uppercase tracking-wider">
             What I Offer
           </span>
@@ -27,7 +27,7 @@ export function Services() {
         </div>
 
         {/* Services Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
           {servicesData.map((service) => {
             const IconComp = iconMap[service.iconName] || Code2;
             const isMint = service.accent === "mint";

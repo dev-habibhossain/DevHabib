@@ -13,7 +13,7 @@ export function FAQAccordion() {
 
   return (
     <section id="faq" className="max-w-4xl mx-auto px-8 py-16">
-      <div className="text-center mb-10">
+      <div className="text-center mb-10" data-aos="fade-up">
         <span className="text-[#3EB489] font-bold text-xs uppercase tracking-wider">
           Got Questions?
         </span>
@@ -22,7 +22,7 @@ export function FAQAccordion() {
         </h2>
       </div>
 
-      <div className="space-y-4">
+      <div className="space-y-4" data-aos="fade-up" data-aos-delay="100">
         {faqData.map((faq, idx) => {
           const isOpen = openIdx === idx;
           return (

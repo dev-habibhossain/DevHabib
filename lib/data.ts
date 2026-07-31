@@ -285,8 +285,8 @@ export const faqData: FAQItem[] = [
     answer: "Yes, I am actively seeking full-time remote or on-site developer positions. I am based in Lakshmipur, Bangladesh, and ready to adapt to your team's workflow and timezone.",
   },
   {
-    question: 'How do you handle project timeline and communication?',
-    answer: 'I maintain active communication via WhatsApp, Slack, GitHub, or Email with regular updates, clear documentation, and clean code version control.',
+    question: 'How quickly can you start?',
+    answer: 'I am available immediately and ready to contribute to projects right away.',
   },
 ];
 

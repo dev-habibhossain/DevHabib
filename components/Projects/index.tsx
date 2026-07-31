@@ -17,7 +17,7 @@ export function Projects() {
 
   return (
     <section id="projects" className="max-w-7xl mx-auto px-8 py-20">
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-12" data-aos="fade-up">
         <div>
           <span className="text-[#3EB489] font-bold text-xs uppercase tracking-wider">
             Portfolio
@@ -38,7 +38,7 @@ export function Projects() {
       </div>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
         {filteredProjects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

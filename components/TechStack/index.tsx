@@ -5,7 +5,7 @@ import { TechCategoryCard } from "./TechCategoryCard";
 export function TechStack() {
   return (
     <section id="tech-stack" className="max-w-7xl mx-auto px-8 py-16">
-      <div className="text-center max-w-xl mx-auto mb-8">
+      <div className="text-center max-w-xl mx-auto mb-8" data-aos="fade-up">
         <span className="text-[#3EB489] font-bold text-xs uppercase tracking-wider">
           Skillset
         </span>
@@ -18,10 +18,12 @@ export function TechStack() {
       </div>
 
       {/* Marquee */}
-      <Marquee />
+      <div data-aos="fade-up">
+        <Marquee />
+      </div>
 
       {/* Categorized Tech Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="100">
         {techCategories.map((category) => (
           <TechCategoryCard key={category.id} category={category} />
         ))}

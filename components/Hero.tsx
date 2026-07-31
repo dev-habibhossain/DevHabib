@@ -15,7 +15,7 @@ export function Hero() {
         className="relative max-w-7xl mx-auto px-8 pt-10 pb-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
       >
         {/* Hero Text (Left) */}
-        <div className="lg:col-span-5 space-y-6 relative z-10">
+        <div className="lg:col-span-5 space-y-6 relative z-10" data-aos="fade-right">
           <div className="w-16 h-12 bg-grid-dots absolute -top-8 -left-6 -z-10" />
 
           <span className="inline-block px-3 py-1 bg-[#3EB489]/10 text-[#3EB489] font-bold text-xs rounded-full uppercase tracking-wider border border-[#3EB489]/20">
@@ -50,7 +50,7 @@ export function Hero() {
         </div>
 
         {/* Hero Graphic Stack (Right) */}
-        <div className="lg:col-span-7 flex justify-center relative">
+        <div className="lg:col-span-7 flex justify-center relative" data-aos="fade-left">
           <svg
             className="absolute -top-10 left-10 w-[380px] h-[380px] sm:w-[460px] sm:h-[460px] text-[#3EB489]/20 pointer-events-none -z-10"
             viewBox="0 0 200 200"

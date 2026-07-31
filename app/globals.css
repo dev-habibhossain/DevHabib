@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 @layer base {
   :root {
     --font-plus-jakarta: var(--font-plus-jakarta-sans, sans-serif);
@@ -17,8 +19,14 @@
   --color-brand-coral-light: rgba(255, 112, 112, 0.12);
 
   --color-brand-darkBg: #0b0f17;
+  --color-brand-dark-bg: #0b0f17;
+
   --color-brand-darkCard: #111827;
+  --color-brand-dark-card: #111827;
+
   --color-brand-darkBorder: #1f2937;
+  --color-brand-dark-border: #1f2937;
+
   --color-brand-muted: #9ca3af;
 }
 

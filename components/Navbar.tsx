@@ -24,7 +24,11 @@ export function Navbar() {
           <a
             key={link.name}
             href={link.href}
-            className="hover:text-[#3EB489] transition font-medium"
+            className={
+              link.name === "Home"
+                ? "text-[#3EB489] font-semibold"
+                : "hover:text-[#3EB489] transition font-medium"
+            }
           >
             {link.name}
           </a>

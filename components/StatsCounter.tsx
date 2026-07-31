@@ -5,7 +5,7 @@ import { statsData } from "@/lib/data";
 
 export function StatsCounter() {
   return (
-    <section className="max-w-7xl mx-auto px-8 py-10">
+    <section className="max-w-7xl mx-auto px-8 py-10" data-aos="fade-up">
       <div className="gcard glass p-8 rounded-3xl border border-gray-100 dark:border-[#1f2937] shadow-sm grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         {statsData.map((stat, idx) => (
           <div

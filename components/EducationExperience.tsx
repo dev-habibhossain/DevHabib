@@ -10,7 +10,7 @@ export function EducationExperience() {
   return (
     <section id="education" className="bg-skew-section py-20 my-10">
       <div className="max-w-5xl mx-auto px-8">
-        <div className="text-center mb-10">
+        <div className="text-center mb-10" data-aos="fade-up">
           <span className="text-[#FF7070] font-bold text-xs uppercase tracking-wider">
             Background
           </span>
@@ -19,7 +19,7 @@ export function EducationExperience() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up" data-aos-delay="100">
           {timelineData.map((item, idx) => {
             const IconComp = iconMap[item.iconName] || Briefcase;
             const isMint = item.accent === "mint";
@@ -59,7 +59,7 @@ export function EducationExperience() {
                     {item.title}
                   </h3>
                   <p className="text-[#9ca3af] text-xs leading-relaxed">
-                    {item.subtitle}
+                    {item.description}
                   </p>
                 </div>
               </div>
