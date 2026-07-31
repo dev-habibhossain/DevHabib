@@ -66,6 +66,7 @@
   mask-composite: exclude;
   opacity: 0.5;
   transition: opacity .35s ease;
+  pointer-events: none;
 }
 .gcard:hover::before {
   opacity: 1;

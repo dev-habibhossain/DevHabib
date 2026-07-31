@@ -33,7 +33,7 @@ export function Preloader() {
         </div>
       </div>
       <p className="mt-5 text-xs font-bold tracking-widest text-[#3EB489] uppercase animate-pulse">
-        Loading Habib's Portfolio...
+        Loading Habib&apos;s Portfolio...
       </p>
     </div>
   );
