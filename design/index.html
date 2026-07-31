@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO METADATA -->
+  <title>Habib Hossain | Full Stack Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Habib Hossain, a passionate Full Stack Developer specializing in MERN Stack and PHP Laravel. Open to remote and on-site opportunities.">
+  <meta name="keywords" content="Habib Hossain, Full Stack Developer, MERN Stack, PHP, Laravel, React, Node.js, Next.js, MongoDB, Web Developer Lakshmipur, Web Developer Bangladesh">
+  <meta name="author" content="Habib Hossain">
+
+  <!-- OPEN GRAPH TAGS -->
+  <meta property="og:title" content="Habib Hossain | Full Stack Developer Portfolio">
+  <meta property="og:description" content="Building modern, scalable, and user-focused web applications with MERN Stack & PHP Laravel.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-domain.com">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1200">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              mint: '#3EB489',
+              'mint-dark': '#2E946F',
+              'mint-light': 'rgba(62, 180, 137, 0.12)',
+              coral: '#FF7070',
+              'coral-light': 'rgba(255, 112, 112, 0.12)',
+              darkBg: '#0b0f17',
+              darkCard: '#111827',
+              darkBorder: '#1f2937',
+              muted: '#9ca3af',
+            }
+          },
+          animation: {
+            float: 'float 6s ease-in-out infinite',
+            bounceSlow: 'bounce 2s infinite',
+          },
+          keyframes: {
+            float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    
+    /* Subtle dot grid pattern */
+    .bg-grid-dots {
+      background-image: radial-gradient(#3EB489 1px, transparent 1px);
+      background-size: 14px 14px;
+      opacity: 0.2;
+    }
+
+    /* Asymmetric Section Dividers */
+    .dark .bg-skew-section {
+      background: linear-gradient(180deg, #111827 0%, #0b0f17 100%);
+      clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 96%);
+    }
+    .bg-skew-section {
+      background: linear-gradient(180deg, #F5FBF8 0%, #FFFFFF 100%);
+      clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 96%);
+    }
+
+    /* Glassmorphism Surface */
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(17, 24, 39, 0.08);
+    }
+    .dark .glass {
+      background: rgba(17, 24, 39, 0.7);
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    /* Gradient Card Border */
+    .gcard {
+      position: relative;
+    }
+    .gcard::before {
+      content: ''; position: absolute; inset: 0; border-radius: inherit; padding: 1px;
+      background: linear-gradient(140deg, rgba(62,180,137,0.5), rgba(255,112,112,0.3), rgba(62,180,137,0) 70%);
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+      opacity: 0.5; transition: opacity .35s ease;
+    }
+    .gcard:hover::before { opacity: 1; }
+
+    /* Infinite Horizontal Marquee */
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: 200%;
+      animation: marquee 25s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+
+    /* Preloader Spinner */
+    @keyframes loader-spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .loader-ring {
+      border: 3px solid rgba(62, 180, 137, 0.2);
+      border-top-color: #3EB489;
+      border-radius: 50%;
+      animation: loader-spin 1s linear infinite;
+    }
+  </style>
+</head>
+<body class="relative bg-white dark:bg-brand-darkBg text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+  <!-- PRELOADER -->
+  <div id="preloader" class="fixed inset-0 z-50 bg-[#070a0f] flex flex-col items-center justify-center transition-opacity duration-500">
+    <div class="relative w-20 h-20 flex items-center justify-center">
+      <div class="loader-ring absolute inset-0 w-full h-full"></div>
+      <div class="w-10 h-10 bg-brand-mint text-white font-extrabold text-sm rounded-xl flex items-center justify-center shadow-lg shadow-emerald-950/50">
+        H.D
+      </div>
+    </div>
+    <p class="mt-5 text-xs font-bold tracking-widest text-brand-mint uppercase animate-pulse">Loading Habib's Portfolio...</p>
+  </div>
+
+  <!-- GLOBAL BACKGROUND VECTOR OUTLINES -->
+  <svg class="absolute top-10 left-4 w-36 h-36 text-brand-mint/10 pointer-events-none -z-10" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+    <path d="M20,10 Q80,10 50,90 Z" />
+  </svg>
+  <svg class="absolute top-96 right-4 w-48 h-48 text-brand-coral/10 pointer-events-none -z-10" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+    <path d="M10,30 Q90,10 70,80 Z" />
+  </svg>
+
+  <!-- NAVIGATION -->
+  <header class="max-w-7xl mx-auto px-8 py-7 flex items-center justify-between relative z-30">
+    <a href="#" class="text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+      Habib.<span class="text-brand-mint">dev</span>
+    </a>
+    
+    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600 dark:text-gray-300">
+      <a href="#home" class="text-brand-mint font-semibold">Home</a>
+      <a href="#about" class="hover:text-brand-mint transition">About</a>
+      <a href="#tech-stack" class="hover:text-brand-mint transition">Tech Stack</a>
+      <a href="#services" class="hover:text-brand-mint transition">Services</a>
+      <a href="#projects" class="hover:text-brand-mint transition">Projects</a>
+      <a href="#education" class="hover:text-brand-mint transition">Education & Exp</a>
+      <a href="#faq" class="hover:text-brand-mint transition">FAQ</a>
+      <a href="#contact" class="hover:text-brand-mint transition">Contact</a>
+    </nav>
+
+    <div class="flex items-center space-x-4">
+      <!-- LIGHT / DARK MODE TOGGLE BUTTON -->
+      <button id="themeToggle" onclick="toggleTheme()" class="w-10 h-10 rounded-xl bg-gray-100 dark:bg-brand-darkCard border border-gray-200 dark:border-brand-darkBorder text-gray-700 dark:text-amber-400 flex items-center justify-center hover:scale-105 transition shadow-sm" title="Toggle Light / Dark Mode">
+        <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+        <i data-lucide="moon" class="w-5 h-5 block dark:hidden text-gray-700"></i>
+      </button>
+
+      <a href="#contact" class="bg-brand-mint text-white font-semibold text-sm px-6 py-2.5 rounded-md hover:bg-brand-mint-dark transition shadow-sm">
+        Hire Me
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="relative max-w-7xl mx-auto px-8 pt-10 pb-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    
+    <!-- Hero Text (Left) -->
+    <div class="lg:col-span-5 space-y-6 relative z-10" data-aos="fade-right">
+      <div class="w-16 h-12 bg-grid-dots absolute -top-8 -left-6 -z-10"></div>
+
+      <span class="inline-block px-3 py-1 bg-brand-mint-light text-brand-mint font-bold text-xs rounded-full uppercase tracking-wider border border-brand-mint/20">
+        Full Stack Developer
+      </span>
+
+      <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-extrabold text-gray-900 dark:text-white leading-[1.12] tracking-tight">
+        Habib Hossain<br><span class="text-brand-mint">Full Stack Developer</span>
+      </h1>
+      
+      <p class="text-brand-muted text-sm sm:text-base leading-relaxed max-w-md">
+        Building modern, scalable, and user-focused web applications with MERN Stack & PHP Laravel.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center space-x-4 pt-3">
+        <a href="#contact" class="bg-brand-mint text-white font-semibold text-sm px-8 py-3.5 rounded-md hover:bg-brand-mint-dark transition shadow-md shadow-emerald-950/20">
+          Hire Me
+        </a>
+        <a href="#projects" class="bg-brand-coral-light text-brand-coral border border-brand-coral/20 font-semibold text-sm px-8 py-3.5 rounded-md hover:bg-brand-coral/20 transition">
+          My Projects
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Graphic Stack (Right) -->
+    <div class="lg:col-span-7 flex justify-center relative" data-aos="fade-left">
+      
+      <svg class="absolute -top-10 left-10 w-[380px] h-[380px] sm:w-[460px] sm:h-[460px] text-brand-mint/20 pointer-events-none -z-10" viewBox="0 0 200 200">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" d="M45,-62C57,-52,65,-38,68,-23C71,-8,69,8,63,22C57,36,47,48,34,56C21,64,5,68,-12,66C-29,64,-47,56,-58,43C-69,30,-73,12,-70,-4C-67,-20,-57,-34,-45,-44C-33,-54,-19,-60,-2,-57C15,-54,33,-72,45,-62Z" transform="translate(100 100)" />
+      </svg>
+
+      <div class="relative w-[310px] h-[360px] sm:w-[380px] sm:h-[430px] flex items-center justify-center">
+        <div class="absolute inset-0 bg-brand-coral/80 rounded-[50px] transform -rotate-3"></div>
+        <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-brand-mint rounded-[35px] -z-10"></div>
+        
+        <!-- HERO DUMMY PORTRAIT IMAGE -->
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800" alt="Habib Hossain Hero" class="relative z-10 w-full h-[112%] object-cover object-top rounded-b-[50px] transform -translate-y-3">
+
+        <!-- FLOATING TECH BADGES (FROM LOVABLE DESIGN) -->
+        <div class="glass absolute left-4 top-6 hidden sm:flex animate-float items-center gap-2 rounded-2xl px-3 py-1.5 text-xs font-semibold shadow-lg">
+          <i data-lucide="atom" class="h-4 w-4 text-brand-mint"></i> React
+        </div>
+        <div class="glass absolute right-4 top-20 hidden sm:flex animate-float items-center gap-2 rounded-2xl px-3 py-1.5 text-xs font-semibold shadow-lg" style="animation-delay:-2s">
+          <i data-lucide="server" class="h-4 w-4 text-brand-coral"></i> Node.js
+        </div>
+
+        <!-- HERO BUTTON WITH MANGA/THOUGHT SPEECH BUBBLE -->
+        <div class="absolute -bottom-10 -left-6 z-20 flex flex-col items-center">
+          
+          <!-- Speech Bubble -->
+          <div class="bg-brand-coral text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg border border-white/20 animate-bounceSlow mb-1 flex items-center gap-1">
+            <span>Get My Resume!</span>
+            <div class="w-1.5 h-1.5 bg-brand-coral rotate-45 absolute -bottom-0.5 left-1/2 -translate-x-1/2"></div>
+          </div>
+
+          <!-- Interactive Play + Download Button -->
+          <div class="bg-white dark:bg-brand-darkCard border border-gray-200 dark:border-gray-700 backdrop-blur-md p-2 rounded-[28px] shadow-xl">
+            <button onclick="openResumeModal()" title="Download Resume Options" class="relative w-16 h-16 bg-brand-mint text-white rounded-[22px] flex items-center justify-center shadow-lg hover:scale-105 transition">
+              <i data-lucide="play" class="w-6 h-6 fill-current ml-1"></i>
+              <!-- Small Download Overlay Icon -->
+              <span class="absolute -bottom-1 -right-1 w-6 h-6 bg-brand-coral text-white rounded-full flex items-center justify-center border-2 border-white dark:border-brand-darkCard shadow-md">
+                <i data-lucide="download" class="w-3 h-3"></i>
+              </span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="w-24 h-24 bg-grid-dots absolute bottom-0 right-4 sm:right-12 -z-10"></div>
+    </div>
+  </section>
+
+  <!-- KEY ACHIEVEMENTS COUNTER BAR -->
+  <section class="max-w-7xl mx-auto px-8 py-10" data-aos="fade-up">
+    <div class="gcard glass p-8 rounded-3xl border border-gray-100 dark:border-brand-darkBorder shadow-sm grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="space-y-1 border-r border-gray-100 dark:border-brand-darkBorder last:border-none">
+        <h3 class="text-3xl font-extrabold text-brand-mint"><span class="count" data-count="6">0</span>+</h3>
+        <p class="text-xs text-brand-muted font-medium">Real Projects Built</p>
+      </div>
+      <div class="space-y-1 border-r border-gray-100 dark:border-brand-darkBorder last:border-none">
+        <h3 class="text-3xl font-extrabold text-brand-coral"><span class="count" data-count="12">0</span>+</h3>
+        <p class="text-xs text-brand-muted font-medium">Tech Skills Mastered</p>
+      </div>
+      <div class="space-y-1 border-r border-gray-100 dark:border-brand-darkBorder last:border-none">
+        <h3 class="text-3xl font-extrabold text-brand-mint"><span class="count" data-count="2">0</span></h3>
+        <p class="text-xs text-brand-muted font-medium">Full Stacks (MERN + Laravel)</p>
+      </div>
+      <div class="space-y-1">
+        <h3 class="text-3xl font-extrabold text-brand-coral"><span class="count" data-count="100">0</span>%</h3>
+        <p class="text-xs text-brand-muted font-medium">Remote/On-site Ready</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECRET ABOUT ME SECTION -->
+  <section id="about" class="max-w-7xl mx-auto px-8 py-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    
+    <!-- Left Cutout Card -->
+    <div class="lg:col-span-5 flex justify-center relative" data-aos="fade-right">
+      <div class="relative w-72 h-80 sm:w-80 sm:h-96 bg-brand-coral/80 rounded-[40px] flex items-end justify-center">
+        
+        <!-- ABOUT DUMMY PORTRAIT IMAGE -->
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" alt="Habib Hossain About" class="w-full h-full object-cover rounded-[40px]">
+        
+        <div class="absolute -top-6 -left-6 w-20 h-20 bg-brand-mint rounded-[25px] -z-10"></div>
+      </div>
+    </div>
+
+    <!-- Right Narrative -->
+    <div class="lg:col-span-7 space-y-6" data-aos="fade-left">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">About Me</h2>
+      
+      <p class="text-brand-muted text-sm sm:text-base leading-relaxed max-w-xl">
+        I am a passionate Full Stack Developer specializing in both the MERN Stack and PHP Laravel. I enjoy building clean, scalable, responsive, and user-friendly web applications.
+      </p>
+      
+      <p class="text-brand-muted text-sm sm:text-base leading-relaxed max-w-xl">
+        I continuously learn modern technologies and best practices to improve my skills and create high-quality digital products. Based in Lakshmipur, Bangladesh, I am open to Remote & On-site opportunities.
+      </p>
+
+      <div>
+        <a href="#services" class="inline-block bg-brand-mint text-white text-sm font-semibold px-7 py-3 rounded-md hover:bg-brand-mint-dark transition shadow-sm">
+          My Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIZED TECH STACK GRID + MOVING SKILL MARQUEE -->
+  <section id="tech-stack" class="max-w-7xl mx-auto px-8 py-16">
+    <div class="text-center max-w-xl mx-auto mb-8" data-aos="fade-up">
+      <span class="text-brand-mint font-bold text-xs uppercase tracking-wider">Skillset</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-1">Categorized Tech Stack</h2>
+      <p class="text-brand-muted text-xs sm:text-sm mt-2">Tools, languages, and frameworks I use every day.</p>
+    </div>
+
+    <!-- RUNNING TECH TAGS MARQUEE -->
+    <div class="overflow-hidden w-full mb-12 py-2 relative" data-aos="fade-up">
+      <div class="animate-marquee space-x-3 items-center">
+        
+        <!-- Set 1 -->
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="code" class="w-3.5 h-3.5 text-brand-mint"></i> HTML5</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="palette" class="w-3.5 h-3.5 text-brand-coral"></i> CSS3</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="file-code" class="w-3.5 h-3.5 text-brand-mint"></i> JavaScript</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="code-2" class="w-3.5 h-3.5 text-brand-coral"></i> TypeScript</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="atom" class="w-3.5 h-3.5 text-brand-mint"></i> React</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="globe" class="w-3.5 h-3.5 text-brand-coral"></i> Next.js</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="wind" class="w-3.5 h-3.5 text-brand-mint"></i> Tailwind CSS</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="layout" class="w-3.5 h-3.5 text-brand-coral"></i> Bootstrap</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="server" class="w-3.5 h-3.5 text-brand-mint"></i> Node.js</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="cpu" class="w-3.5 h-3.5 text-brand-coral"></i> Express.js</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="layers" class="w-3.5 h-3.5 text-brand-mint"></i> PHP</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="box" class="w-3.5 h-3.5 text-brand-coral"></i> Laravel</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="database" class="w-3.5 h-3.5 text-brand-mint"></i> MongoDB</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="database" class="w-3.5 h-3.5 text-brand-coral"></i> MySQL</span>
+
+        <!-- Duplicated Set -->
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="code" class="w-3.5 h-3.5 text-brand-mint"></i> HTML5</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="palette" class="w-3.5 h-3.5 text-brand-coral"></i> CSS3</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="file-code" class="w-3.5 h-3.5 text-brand-mint"></i> JavaScript</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="code-2" class="w-3.5 h-3.5 text-brand-coral"></i> TypeScript</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="atom" class="w-3.5 h-3.5 text-brand-mint"></i> React</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="globe" class="w-3.5 h-3.5 text-brand-coral"></i> Next.js</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="wind" class="w-3.5 h-3.5 text-brand-mint"></i> Tailwind CSS</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="layout" class="w-3.5 h-3.5 text-brand-coral"></i> Bootstrap</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="server" class="w-3.5 h-3.5 text-brand-mint"></i> Node.js</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="cpu" class="w-3.5 h-3.5 text-brand-coral"></i> Express.js</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="layers" class="w-3.5 h-3.5 text-brand-mint"></i> PHP</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="box" class="w-3.5 h-3.5 text-brand-coral"></i> Laravel</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="database" class="w-3.5 h-3.5 text-brand-mint"></i> MongoDB</span>
+        <span class="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder"><i data-lucide="database" class="w-3.5 h-3.5 text-brand-coral"></i> MySQL</span>
+
+      </div>
+    </div>
+
+    <!-- Tech Stack Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="100">
+      
+      <!-- Frontend Card -->
+      <div class="gcard glass p-6 rounded-3xl border border-gray-100 dark:border-brand-darkBorder shadow-sm space-y-4 hover:border-brand-mint transition">
+        <div class="w-10 h-10 rounded-xl bg-brand-mint-light text-brand-mint flex items-center justify-center">
+          <i data-lucide="layout" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-base font-bold text-gray-900 dark:text-white">Frontend</h3>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">HTML5</span>
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">CSS3</span>
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">JavaScript</span>
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">TypeScript</span>
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">React</span>
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">Next.js</span>
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">Tailwind</span>
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">Bootstrap</span>
+        </div>
+      </div>
+
+      <!-- Backend Card -->
+      <div class="gcard glass p-6 rounded-3xl border border-gray-100 dark:border-brand-darkBorder shadow-sm space-y-4 hover:border-brand-coral transition">
+        <div class="w-10 h-10 rounded-xl bg-brand-coral-light text-brand-coral flex items-center justify-center">
+          <i data-lucide="server" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-base font-bold text-gray-900 dark:text-white">Backend</h3>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">Node.js</span>
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">Express.js</span>
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">PHP</span>
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">Laravel</span>
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">REST APIs</span>
+        </div>
+      </div>
+
+      <!-- Database Card -->
+      <div class="gcard glass p-6 rounded-3xl border border-gray-100 dark:border-brand-darkBorder shadow-sm space-y-4 hover:border-brand-mint transition">
+        <div class="w-10 h-10 rounded-xl bg-brand-mint-light text-brand-mint flex items-center justify-center">
+          <i data-lucide="database" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-base font-bold text-gray-900 dark:text-white">Database</h3>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">MongoDB</span>
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">MySQL</span>
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">Mongoose</span>
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">Eloquent ORM</span>
+        </div>
+      </div>
+
+      <!-- Tools Card -->
+      <div class="gcard glass p-6 rounded-3xl border border-gray-100 dark:border-brand-darkBorder shadow-sm space-y-4 hover:border-brand-coral transition">
+        <div class="w-10 h-10 rounded-xl bg-brand-coral-light text-brand-coral flex items-center justify-center">
+          <i data-lucide="wrench" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-base font-bold text-gray-900 dark:text-white">Tools</h3>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">Git</span>
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">GitHub</span>
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">VS Code</span>
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">Postman</span>
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">Figma</span>
+          <span class="px-2.5 py-1 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md border border-gray-100 dark:border-gray-700">Vercel</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MY SERVICES SECTION -->
+  <section id="services" class="bg-skew-section py-28 my-10">
+    <div class="max-w-7xl mx-auto px-8">
+      
+      <div class="text-center max-w-xl mx-auto mb-12" data-aos="fade-up">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">My Services</h2>
+        <p class="text-brand-muted text-xs sm:text-sm mt-3">
+          Comprehensive full stack web development services tailored to build high-performance web applications.
+        </p>
+      </div>
+
+      <!-- Services Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+        
+        <!-- Service 1 -->
+        <div class="gcard glass p-8 rounded-3xl border border-gray-100 dark:border-brand-darkBorder shadow-sm space-y-4 hover:border-brand-mint transition">
+          <div class="w-12 h-12 rounded-xl bg-brand-mint-light text-brand-mint flex items-center justify-center">
+            <i data-lucide="code-2" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white">Full Stack Web Development</h3>
+          <p class="text-brand-muted text-xs leading-relaxed">
+            End-to-end modern web applications built using MERN Stack or PHP Laravel architecture.
+          </p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="gcard glass p-8 rounded-3xl border border-gray-100 dark:border-brand-darkBorder shadow-sm space-y-4 hover:border-brand-coral transition">
+          <div class="w-12 h-12 rounded-xl bg-brand-coral-light text-brand-coral flex items-center justify-center">
+            <i data-lucide="layers" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white">MERN Stack Development</h3>
+          <p class="text-brand-muted text-xs leading-relaxed">
+            Fast, scalable SPAs with MongoDB, Express.js, React, Next.js, and Node.js.
+          </p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="gcard glass p-8 rounded-3xl border border-gray-100 dark:border-brand-darkBorder shadow-sm space-y-4 hover:border-brand-mint transition">
+          <div class="w-12 h-12 rounded-xl bg-brand-mint-light text-brand-mint flex items-center justify-center">
+            <i data-lucide="server" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white">PHP Laravel Development</h3>
+          <p class="text-brand-muted text-xs leading-relaxed">
+            Robust web solutions, MVC backends, and relational database integrations with PHP & Laravel.
+          </p>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="gcard glass p-8 rounded-3xl border border-gray-100 dark:border-brand-darkBorder shadow-sm space-y-4 hover:border-brand-coral transition">
+          <div class="w-12 h-12 rounded-xl bg-brand-coral-light text-brand-coral flex items-center justify-center">
+            <i data-lucide="cpu" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white">REST API & Auth Systems</h3>
+          <p class="text-brand-muted text-xs leading-relaxed">
+            Secure REST API development, JWT authentication mechanisms, and seamless middleware integration.
+          </p>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="gcard glass p-8 rounded-3xl border border-gray-100 dark:border-brand-darkBorder shadow-sm space-y-4 hover:border-brand-mint transition">
+          <div class="w-12 h-12 rounded-xl bg-brand-mint-light text-brand-mint flex items-center justify-center">
+            <i data-lucide="layout" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white">Responsive Website & Dashboards</h3>
+          <p class="text-brand-muted text-xs leading-relaxed">
+            Mobile-first responsive frontend design and custom admin dashboard development using Tailwind CSS & Bootstrap.
+          </p>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="gcard glass p-8 rounded-3xl border border-gray-100 dark:border-brand-darkBorder shadow-sm space-y-4 hover:border-brand-coral transition">
+          <div class="w-12 h-12 rounded-xl bg-brand-coral-light text-brand-coral flex items-center justify-center">
+            <i data-lucide="database" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white">Database Design & Optimization</h3>
+          <p class="text-brand-muted text-xs leading-relaxed">
+            Database schema modeling with MongoDB & MySQL, bug fixing, and web performance optimization.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS GALLERY SECTION -->
+  <section id="projects" class="max-w-7xl mx-auto px-8 py-20">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12" data-aos="fade-up">
+      <div>
+        <span class="text-brand-mint font-bold text-xs uppercase tracking-wider">Portfolio</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-1">Featured Projects</h2>
+        <p class="text-brand-muted text-xs sm:text-sm mt-2">Real web applications engineered with modern technologies.</p>
+      </div>
+
+      <div class="flex items-center space-x-2 mt-6 md:mt-0">
+        <button class="px-4 py-2 bg-brand-mint text-white text-xs font-semibold rounded-lg shadow-sm">All</button>
+        <button class="px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-600 dark:text-gray-300 hover:text-brand-mint text-xs font-semibold rounded-lg border border-gray-200 dark:border-brand-darkBorder transition">Laravel</button>
+        <button class="px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-600 dark:text-gray-300 hover:text-brand-mint text-xs font-semibold rounded-lg border border-gray-200 dark:border-brand-darkBorder transition">MERN / Next</button>
+      </div>
+    </div>
+
+    <!-- Project Cards Grid with DUMMY SCREENSHOT IMAGES -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+      
+      <!-- Project 1: ShopEase -->
+      <div class="gcard glass rounded-3xl overflow-hidden border border-gray-100 dark:border-brand-darkBorder shadow-sm group hover:shadow-lg hover:border-brand-mint/50 transition">
+        <div class="relative h-48 bg-brand-mint-light dark:bg-gray-900 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1556742049-0a670f4a4591?auto=format&fit=crop&q=80&w=800" alt="ShopEase Screenshot" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+          <span class="absolute top-4 left-4 bg-brand-mint text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Laravel / Vue</span>
+        </div>
+        <div class="p-6 space-y-3">
+          <h4 class="text-base font-bold text-gray-900 dark:text-white group-hover:text-brand-mint transition">ShopEase</h4>
+          <p class="text-xs font-semibold text-brand-mint">E-Commerce Platform</p>
+          <p class="text-brand-muted text-xs leading-relaxed line-clamp-2">
+            Full-featured e-commerce system with merchant portal, product catalog, cart, and Stripe payment processing.
+          </p>
+          <p class="text-[11px] text-gray-500 dark:text-gray-400 truncate"><strong>Features:</strong> Merchant Dashboard, Cart, Stripe</p>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 dark:border-brand-darkBorder">
+            <span class="text-[10px] font-medium text-gray-400 truncate max-w-[170px]">PHP, Laravel, Vue.js, MySQL, Stripe</span>
+            <div class="flex items-center space-x-2 shrink-0">
+              <a href="#" class="w-7 h-7 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 flex items-center justify-center hover:bg-brand-mint hover:text-white transition" title="GitHub Link">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              </a>
+              <a href="#" class="w-7 h-7 rounded-full bg-brand-mint-light text-brand-mint flex items-center justify-center hover:bg-brand-mint hover:text-white transition" title="Live Demo">
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: MetOffice -->
+      <div class="gcard glass rounded-3xl overflow-hidden border border-gray-100 dark:border-brand-darkBorder shadow-sm group hover:shadow-lg hover:border-brand-coral/50 transition">
+        <div class="relative h-48 bg-brand-coral-light dark:bg-gray-900 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800" alt="MetOffice Screenshot" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+          <span class="absolute top-4 left-4 bg-brand-coral text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">MERN Stack</span>
+        </div>
+        <div class="p-6 space-y-3">
+          <h4 class="text-base font-bold text-gray-900 dark:text-white group-hover:text-brand-coral transition">MetOffice</h4>
+          <p class="text-xs font-semibold text-brand-coral">Employee & HR Platform</p>
+          <p class="text-brand-muted text-xs leading-relaxed line-clamp-2">
+            Comprehensive HR management platform for tracking employee records, payroll, attendance, and internal updates.
+          </p>
+          <p class="text-[11px] text-gray-500 dark:text-gray-400 truncate"><strong>Features:</strong> JWT Auth, HR Analytics, Payroll Stripe</p>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 dark:border-brand-darkBorder">
+            <span class="text-[10px] font-medium text-gray-400 truncate max-w-[170px]">React, Node.js, Express, MongoDB</span>
+            <div class="flex items-center space-x-2 shrink-0">
+              <a href="#" class="w-7 h-7 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 flex items-center justify-center hover:bg-brand-coral hover:text-white transition" title="GitHub Link">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              </a>
+              <a href="#" class="w-7 h-7 rounded-full bg-brand-coral-light text-brand-coral flex items-center justify-center hover:bg-brand-coral hover:text-white transition" title="Live Demo">
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Suitetrack -->
+      <div class="gcard glass rounded-3xl overflow-hidden border border-gray-100 dark:border-brand-darkBorder shadow-sm group hover:shadow-lg hover:border-brand-mint/50 transition">
+        <div class="relative h-48 bg-brand-mint-light dark:bg-gray-900 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800" alt="Suitetrack Screenshot" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+          <span class="absolute top-4 left-4 bg-brand-mint text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Next.js / TS</span>
+        </div>
+        <div class="p-6 space-y-3">
+          <h4 class="text-base font-bold text-gray-900 dark:text-white group-hover:text-brand-mint transition">Suitetrack</h4>
+          <p class="text-xs font-semibold text-brand-mint">Hotel Management Platform</p>
+          <p class="text-brand-muted text-xs leading-relaxed line-clamp-2">
+            Modern hotel suite management system for booking suites, managing reservations, and guest workflows.
+          </p>
+          <p class="text-[11px] text-gray-500 dark:text-gray-400 truncate"><strong>Features:</strong> Suite Booking, Real-time Status</p>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 dark:border-brand-darkBorder">
+            <span class="text-[10px] font-medium text-gray-400 truncate max-w-[170px]">Next.js, TypeScript, MongoDB</span>
+            <div class="flex items-center space-x-2 shrink-0">
+              <a href="#" class="w-7 h-7 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 flex items-center justify-center hover:bg-brand-mint hover:text-white transition" title="GitHub Link">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              </a>
+              <a href="#" class="w-7 h-7 rounded-full bg-brand-mint-light text-brand-mint flex items-center justify-center hover:bg-brand-mint hover:text-white transition" title="Live Demo">
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: GreenGuide -->
+      <div class="gcard glass rounded-3xl overflow-hidden border border-gray-100 dark:border-brand-darkBorder shadow-sm group hover:shadow-lg hover:border-brand-coral/50 transition">
+        <div class="relative h-48 bg-brand-coral-light dark:bg-gray-900 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800" alt="GreenGuide Screenshot" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+          <span class="absolute top-4 left-4 bg-brand-coral text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Web App</span>
+        </div>
+        <div class="p-6 space-y-3">
+          <h4 class="text-base font-bold text-gray-900 dark:text-white group-hover:text-brand-coral transition">GreenGuide</h4>
+          <p class="text-xs font-semibold text-brand-coral">Sustainability Platform</p>
+          <p class="text-brand-muted text-xs leading-relaxed line-clamp-2">
+            Web application helping users discover eco-friendly practices, sustainability guides, and community tips.
+          </p>
+          <p class="text-[11px] text-gray-500 dark:text-gray-400 truncate"><strong>Features:</strong> Resource Library, Guides</p>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 dark:border-brand-darkBorder">
+            <span class="text-[10px] font-medium text-gray-400 truncate max-w-[170px]">React, JavaScript, Tailwind CSS</span>
+            <div class="flex items-center space-x-2 shrink-0">
+              <a href="#" class="w-7 h-7 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 flex items-center justify-center hover:bg-brand-coral hover:text-white transition" title="GitHub Link">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              </a>
+              <a href="#" class="w-7 h-7 rounded-full bg-brand-coral-light text-brand-coral flex items-center justify-center hover:bg-brand-coral hover:text-white transition" title="Live Demo">
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5: Tour Asia -->
+      <div class="gcard glass rounded-3xl overflow-hidden border border-gray-100 dark:border-brand-darkBorder shadow-sm group hover:shadow-lg hover:border-brand-mint/50 transition">
+        <div class="relative h-48 bg-brand-mint-light dark:bg-gray-900 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=800" alt="Tour Asia Screenshot" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+          <span class="absolute top-4 left-4 bg-brand-mint text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Travel Web</span>
+        </div>
+        <div class="p-6 space-y-3">
+          <h4 class="text-base font-bold text-gray-900 dark:text-white group-hover:text-brand-mint transition">Tour Asia</h4>
+          <p class="text-xs font-semibold text-brand-mint">Tourism Booking Platform</p>
+          <p class="text-brand-muted text-xs leading-relaxed line-clamp-2">
+            Travel booking platform showcasing Asian tour packages, custom itineraries, and travel bookings.
+          </p>
+          <p class="text-[11px] text-gray-500 dark:text-gray-400 truncate"><strong>Features:</strong> Tour Packages, Booking System</p>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 dark:border-brand-darkBorder">
+            <span class="text-[10px] font-medium text-gray-400 truncate max-w-[170px]">Full Stack Web Technologies</span>
+            <div class="flex items-center space-x-2 shrink-0">
+              <a href="#" class="w-7 h-7 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 flex items-center justify-center hover:bg-brand-mint hover:text-white transition" title="GitHub Link">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              </a>
+              <a href="#" class="w-7 h-7 rounded-full bg-brand-mint-light text-brand-mint flex items-center justify-center hover:bg-brand-mint hover:text-white transition" title="Live Demo">
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6: Supreme Gadgets -->
+      <div class="gcard glass rounded-3xl overflow-hidden border border-gray-100 dark:border-brand-darkBorder shadow-sm group hover:shadow-lg hover:border-brand-coral/50 transition">
+        <div class="relative h-48 bg-brand-coral-light dark:bg-gray-900 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800" alt="Supreme Gadgets Screenshot" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+          <span class="absolute top-4 left-4 bg-brand-coral text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">E-Commerce</span>
+        </div>
+        <div class="p-6 space-y-3">
+          <h4 class="text-base font-bold text-gray-900 dark:text-white group-hover:text-brand-coral transition">Supreme Gadgets</h4>
+          <p class="text-xs font-semibold text-brand-coral">Tech Gadgets Store</p>
+          <p class="text-brand-muted text-xs leading-relaxed line-clamp-2">
+            E-commerce platform for tech gadgets, electronics filtering, interactive search, and shopping cart.
+          </p>
+          <p class="text-[11px] text-gray-500 dark:text-gray-400 truncate"><strong>Features:</strong> Product Filtering, Cart & Checkout</p>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 dark:border-brand-darkBorder">
+            <span class="text-[10px] font-medium text-gray-400 truncate max-w-[170px]">React, Tailwind CSS, Web API</span>
+            <div class="flex items-center space-x-2 shrink-0">
+              <a href="#" class="w-7 h-7 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 flex items-center justify-center hover:bg-brand-coral hover:text-white transition" title="GitHub Link">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              </a>
+              <a href="#" class="w-7 h-7 rounded-full bg-brand-coral-light text-brand-coral flex items-center justify-center hover:bg-brand-coral hover:text-white transition" title="Live Demo">
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION & EXPERIENCE SECTION -->
+  <section id="education" class="bg-skew-section py-20 my-10">
+    <div class="max-w-5xl mx-auto px-8">
+      <div class="text-center mb-10" data-aos="fade-up">
+        <span class="text-brand-coral font-bold text-xs uppercase tracking-wider">Background</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white mt-1">Education & Experience</h2>
+      </div>
+
+      <!-- Compact Timeline Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up" data-aos-delay="100">
+        
+        <!-- Experience Badge Card -->
+        <div class="gcard glass p-6 rounded-2xl border border-gray-100 dark:border-brand-darkBorder shadow-sm flex items-start gap-4 hover:border-brand-coral transition">
+          <div class="w-10 h-10 rounded-xl bg-brand-coral-light text-brand-coral flex items-center justify-center shrink-0 mt-1">
+            <i data-lucide="briefcase" class="w-5 h-5"></i>
+          </div>
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="text-[10px] font-bold px-2 py-0.5 bg-brand-coral-light text-brand-coral rounded-full uppercase">Experience</span>
+              <span class="text-xs text-gray-400 font-semibold">Fresher</span>
+            </div>
+            <h3 class="text-base font-bold text-gray-900 dark:text-white">Full Stack Developer</h3>
+            <p class="text-brand-muted text-xs leading-relaxed">
+              Building projects in MERN Stack & PHP Laravel with a focus on clean, scalable web development.
+            </p>
+          </div>
+        </div>
+
+        <!-- Education Badge Card -->
+        <div class="gcard glass p-6 rounded-2xl border border-gray-100 dark:border-brand-darkBorder shadow-sm flex items-start gap-4 hover:border-brand-mint transition">
+          <div class="w-10 h-10 rounded-xl bg-brand-mint-light text-brand-mint flex items-center justify-center shrink-0 mt-1">
+            <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+          </div>
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="text-[10px] font-bold px-2 py-0.5 bg-brand-mint-light text-brand-mint rounded-full uppercase">Education</span>
+              <span class="text-xs text-gray-400 font-semibold">Graduation: 2026</span>
+            </div>
+            <h3 class="text-base font-bold text-gray-900 dark:text-white">BA (Honours) in Economics</h3>
+            <p class="text-brand-muted text-xs leading-relaxed">
+              Lakshmipur Government College
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFESSIONAL STATUS SECTION -->
+  <section id="testimonials" class="max-w-4xl mx-auto px-8 py-16 text-center space-y-8" data-aos="fade-up">
+    <div class="gcard glass p-8 sm:p-10 rounded-3xl border border-gray-100 dark:border-brand-darkBorder shadow-sm space-y-4">
+      <div class="w-14 h-14 bg-brand-mint-light text-brand-mint rounded-full flex items-center justify-center mx-auto">
+        <i data-lucide="sparkles" class="w-7 h-7"></i>
+      </div>
+      <p class="text-brand-muted text-base sm:text-lg max-w-2xl mx-auto leading-relaxed italic font-medium">
+        "Currently seeking my first professional opportunity. I'm actively building projects and continuously improving my skills."
+      </p>
+      <h4 class="text-xs font-bold text-gray-900 dark:text-white uppercase tracking-wider">— Habib Hossain (Full Stack Developer)</h4>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE FAQ ACCORDION -->
+  <section id="faq" class="max-w-4xl mx-auto px-8 py-16">
+    <div class="text-center mb-10" data-aos="fade-up">
+      <span class="text-brand-mint font-bold text-xs uppercase tracking-wider">Got Questions?</span>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white mt-1">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+      
+      <!-- FAQ 1 -->
+      <details class="gcard glass rounded-2xl border border-gray-100 dark:border-brand-darkBorder shadow-sm group p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+        <summary class="flex items-center justify-between font-bold text-sm text-gray-900 dark:text-white">
+          What is your primary tech stack preference?
+          <span class="text-brand-mint transition group-open:rotate-180">
+            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+          </span>
+        </summary>
+        <p class="text-xs text-brand-muted leading-relaxed mt-3">
+          I am equally proficient in both the MERN Stack (MongoDB, Express, React, Node) and PHP Laravel. I select the stack best suited for the specific project requirements.
+        </p>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="gcard glass rounded-2xl border border-gray-100 dark:border-brand-darkBorder shadow-sm group p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+        <summary class="flex items-center justify-between font-bold text-sm text-gray-900 dark:text-white">
+          Are you open to full-time remote or on-site roles?
+          <span class="text-brand-mint transition group-open:rotate-180">
+            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+          </span>
+        </summary>
+        <p class="text-xs text-brand-muted leading-relaxed mt-3">
+          Yes! I am open to Remote positions globally, as well as On-site developer opportunities.
+        </p>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="gcard glass rounded-2xl border border-gray-100 dark:border-brand-darkBorder shadow-sm group p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+        <summary class="flex items-center justify-between font-bold text-sm text-gray-900 dark:text-white">
+          How quickly can you start?
+          <span class="text-brand-mint transition group-open:rotate-180">
+            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+          </span>
+        </summary>
+        <p class="text-xs text-brand-muted leading-relaxed mt-3">
+          I am available immediately and ready to contribute to projects right away.
+        </p>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- GET IN TOUCH SECTION -->
+  <section id="contact" class="max-w-7xl mx-auto px-8 py-20" data-aos="fade-up">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">Get In Touch</h2>
+      <p class="text-brand-muted text-xs sm:text-sm mt-2">Open to Remote & On-site Opportunities worldwide.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Contact Info Cards Left -->
+      <div class="lg:col-span-4 space-y-4">
+        <div class="gcard glass p-6 rounded-2xl border border-gray-100 dark:border-brand-darkBorder flex items-center space-x-4 shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-brand-mint-light text-brand-mint flex items-center justify-center shrink-0">
+            <i data-lucide="phone" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <p class="text-xs text-brand-muted">Phone / WhatsApp</p>
+            <p class="text-xs font-bold text-gray-900 dark:text-white">your-phone</p>
+          </div>
+        </div>
+
+        <div class="gcard glass p-6 rounded-2xl border border-gray-100 dark:border-brand-darkBorder flex items-center space-x-4 shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-brand-coral-light text-brand-coral flex items-center justify-center shrink-0">
+            <i data-lucide="mail" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <p class="text-xs text-brand-muted">E-mail</p>
+            <p class="text-xs font-bold text-gray-900 dark:text-white">your-email@example.com</p>
+          </div>
+        </div>
+
+        <div class="gcard glass p-6 rounded-2xl border border-gray-100 dark:border-brand-darkBorder flex items-center space-x-4 shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-brand-mint-light text-brand-mint flex items-center justify-center shrink-0">
+            <i data-lucide="map-pin" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <p class="text-xs text-brand-muted">Location</p>
+            <p class="text-xs font-bold text-gray-900 dark:text-white">Lakshmipur, Bangladesh</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Message Form Right (With Integrated Download Resume Button) -->
+      <div class="lg:col-span-8 bg-brand-mint p-8 sm:p-10 rounded-3xl shadow-xl text-white">
+        <h3 class="text-lg font-bold mb-6">Leave us a Message</h3>
+        <form class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-xl text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-brand-coral">
+            <input type="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-xl text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-brand-coral">
+          </div>
+          <textarea rows="4" placeholder="Your Message..." class="w-full px-4 py-3 rounded-xl text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-brand-coral"></textarea>
+          
+          <!-- Action Buttons Inside Get In Touch Form -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <button type="submit" class="bg-brand-coral text-white text-xs font-bold px-8 py-3.5 rounded-xl hover:bg-red-500 transition shadow-md">
+              Send Message
+            </button>
+            <!-- DOWNLOAD RESUME BUTTON INSIDE FORM -->
+            <button type="button" onclick="openResumeModal()" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white text-xs font-bold px-6 py-3.5 rounded-xl transition flex items-center gap-2">
+              <i data-lucide="file-text" class="w-4 h-4"></i> Download Resume
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-gray-200 dark:border-brand-darkBorder py-10 mt-10">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-brand-muted">
+      <div>
+        <a href="#" class="text-xl font-bold text-gray-900 dark:text-white">Habib.<span class="text-brand-mint">dev</span></a>
+        <p class="mt-1">© 2026 Habib Hossain. All Rights Reserved.</p>
+      </div>
+
+      <div class="flex space-x-6 font-medium">
+        <a href="#home" class="hover:text-brand-mint">Home</a>
+        <a href="#about" class="hover:text-brand-mint">About</a>
+        <a href="#tech-stack" class="hover:text-brand-mint">Tech Stack</a>
+        <a href="#services" class="hover:text-brand-mint">Services</a>
+        <a href="#projects" class="hover:text-brand-mint">Projects</a>
+        <a href="#education" class="hover:text-brand-mint">Education</a>
+        <a href="#contact" class="hover:text-brand-mint">Contact</a>
+      </div>
+
+      <div class="flex space-x-3 text-gray-600 dark:text-gray-400">
+        <a href="your-github" class="w-8 h-8 rounded-full border border-gray-200 dark:border-gray-800 flex items-center justify-center hover:text-brand-mint hover:border-brand-mint transition" title="GitHub">
+          <i data-lucide="github" class="w-4 h-4"></i>
+        </a>
+        <a href="your-linkedin" class="w-8 h-8 rounded-full border border-gray-200 dark:border-gray-800 flex items-center justify-center hover:text-brand-mint hover:border-brand-mint transition" title="LinkedIn">
+          <i data-lucide="linkedin" class="w-4 h-4"></i>
+        </a>
+        <a href="your-email@example.com" class="w-8 h-8 rounded-full border border-gray-200 dark:border-gray-800 flex items-center justify-center hover:text-brand-mint hover:border-brand-mint transition" title="Email">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- RESUME DOWNLOAD MODAL -->
+  <div id="resumeModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md hidden p-4 transition-all">
+    <div class="bg-white dark:bg-brand-darkCard border border-gray-200 dark:border-gray-700/80 rounded-3xl p-8 max-w-xl w-full relative shadow-2xl space-y-6">
+      
+      <!-- Close Button -->
+      <button onclick="closeResumeModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-900 dark:hover:text-white p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Modal Options Grid (Transparent Feel with Middle Divider) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 relative pt-4">
+        
+        <!-- Divider -->
+        <div class="hidden md:block absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[1px] bg-gray-200 dark:bg-gray-700/60"></div>
+        <div class="md:hidden w-full h-[1px] bg-gray-200 dark:bg-gray-700/60 my-2"></div>
+
+        <!-- Left Option: MERN Stack -->
+        <div class="flex flex-col items-center text-center space-y-4 p-4 hover:bg-brand-mint-light rounded-2xl transition">
+          <div class="w-14 h-14 rounded-2xl bg-brand-mint-light text-brand-mint flex items-center justify-center">
+            <i data-lucide="layers" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <h4 class="text-base font-bold text-gray-900 dark:text-white">MERN Stack Resume</h4>
+            <p class="text-[11px] text-brand-muted mt-1">Focused on React, Node.js, Express, MongoDB & Next.js</p>
+          </div>
+          <a href="path-to-mern-resume.pdf" download="Habib_Hossain_MERN_Resume.pdf" class="w-full py-2.5 bg-brand-mint text-white text-xs font-bold rounded-xl hover:bg-brand-mint-dark transition shadow-md flex items-center justify-center gap-2">
+            <i data-lucide="download" class="w-4 h-4"></i> Download PDF
+          </a>
+        </div>
+
+        <!-- Right Option: PHP Laravel -->
+        <div class="flex flex-col items-center text-center space-y-4 p-4 hover:bg-brand-coral-light rounded-2xl transition">
+          <div class="w-14 h-14 rounded-2xl bg-brand-coral-light text-brand-coral flex items-center justify-center">
+            <i data-lucide="box" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <h4 class="text-base font-bold text-gray-900 dark:text-white">PHP Laravel Resume</h4>
+            <p class="text-[11px] text-brand-muted mt-1">Focused on PHP, Laravel, MySQL, Eloquent & Blade</p>
+          </div>
+          <a href="path-to-laravel-resume.pdf" download="Habib_Hossain_Laravel_Resume.pdf" class="w-full py-2.5 bg-brand-coral text-white text-xs font-bold rounded-xl hover:bg-red-500 transition shadow-md flex items-center justify-center gap-2">
+            <i data-lucide="download" class="w-4 h-4"></i> Download PDF
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    lucide.createIcons();
+
+    AOS.init({
+      once: true,
+      duration: 800,
+    });
+
+    // COUNT-UP ANIMATION FOR HERO STATS (FROM LOVABLE SCRIPT)
+    const counters = document.querySelectorAll('.count');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = Number(el.dataset.count);
+        let current = 0;
+        const step = Math.max(1, Math.round(target / 40));
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) { current = target; clearInterval(timer); }
+          el.textContent = current;
+        }, 30);
+        io.unobserve(el);
+      });
+    }, { threshold: 0.6 });
+    counters.forEach((c) => io.observe(c));
+
+    // THEME TOGGLE LOGIC
+    function toggleTheme() {
+      const html = document.documentElement;
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    // LOAD SAVED THEME
+    if (localStorage.getItem('theme') === 'light') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+
+    // PRELOADER LOGIC
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      setTimeout(() => {
+        preloader.classList.add('opacity-0');
+        setTimeout(() => preloader.style.display = 'none', 500);
+      }, 400);
+    });
+
+    // RESUME MODAL LOGIC
+    function openResumeModal() {
+      document.getElementById('resumeModal').classList.remove('hidden');
+    }
+    function closeResumeModal() {
+      document.getElementById('resumeModal').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

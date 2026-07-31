@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Project Details | Habib Hossain</title>
+  <meta name="description" content="Full Stack Project Showcase — MERN Stack & PHP Laravel.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              mint: '#3EB489',
+              'mint-dark': '#2E946F',
+              'mint-light': 'rgba(62, 180, 137, 0.12)',
+              coral: '#FF7070',
+              'coral-light': 'rgba(255, 112, 112, 0.12)',
+              darkBg: '#0b0f17',
+              darkCard: '#111827',
+              darkBorder: '#1f2937',
+              muted: '#9ca3af',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(17, 24, 39, 0.08);
+    }
+    .dark .glass {
+      background: rgba(17, 24, 39, 0.7);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* Subtle gradient glow border for tech cards */
+    .gcard-subtle {
+      position: relative;
+    }
+    .gcard-subtle::before {
+      content: ''; position: absolute; inset: 0; border-radius: inherit; padding: 1px;
+      background: linear-gradient(140deg, rgba(62,180,137,0.25), rgba(255,112,112,0.12), transparent 70%);
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+      opacity: 0.45; transition: opacity .35s ease;
+      pointer-events: none;
+    }
+    .gcard-subtle:hover::before { opacity: 0.95; }
+  </style>
+</head>
+<body class="relative bg-white dark:bg-brand-darkBg text-gray-900 dark:text-gray-100 min-h-screen flex flex-col justify-between transition-colors duration-300">
+
+  <!-- NAVIGATION HEADER -->
+  <header class="max-w-6xl mx-auto w-full px-8 sm:px-10 py-6 flex items-center justify-between relative z-20">
+    <a href="index.html" class="text-xl font-extrabold text-gray-900 dark:text-white flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5 text-brand-mint"></i>
+      Habib.<span class="text-brand-mint">dev</span>
+    </a>
+
+    <div class="flex items-center space-x-3">
+      <button id="themeToggle" onclick="toggleTheme()" class="w-9 h-9 rounded-xl bg-gray-100 dark:bg-brand-darkCard border border-gray-200/60 dark:border-gray-800/60 text-gray-700 dark:text-amber-400 flex items-center justify-center hover:border-brand-mint/50 transition">
+        <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
+        <i data-lucide="moon" class="w-4 h-4 block dark:hidden text-gray-700"></i>
+      </button>
+
+      <a href="index.html#projects" class="bg-brand-mint text-white text-xs font-semibold px-4 py-2 rounded-xl hover:bg-brand-mint-dark transition shadow-sm">
+        Back to Projects
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-6xl mx-auto w-full px-8 sm:px-10 py-4 space-y-8">
+
+    <!-- 1. HEADER SECTION (TITLE + LINKS) -->
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-gray-200/50 dark:border-gray-800/40 pb-6">
+      <div class="space-y-2">
+        <div class="flex items-center gap-2">
+          <span id="projectBadge" class="bg-brand-mint-light text-brand-mint border border-brand-mint/20 text-[10px] font-bold px-3 py-0.5 rounded-full uppercase">
+            Laravel / Vue.js
+          </span>
+          <span class="text-xs text-brand-muted font-medium">• Full Stack Application</span>
+        </div>
+
+        <h1 id="projectTitle" class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight">
+          ShopEase Platform
+        </h1>
+
+        <p id="projectSubtitle" class="text-xs sm:text-sm font-semibold text-brand-mint">
+          E-Commerce & Merchant Management System
+        </p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3 shrink-0">
+        <a id="linkLive" href="#" target="_blank" class="flex items-center gap-2 bg-brand-mint text-white text-xs font-bold px-5 py-2.5 rounded-xl hover:bg-brand-mint-dark transition shadow-md">
+          <i data-lucide="arrow-up-right" class="w-4 h-4"></i> Live Demo
+        </a>
+        <a id="linkGithub" href="#" target="_blank" class="flex items-center gap-2 bg-gray-100 dark:bg-brand-darkCard border border-gray-200/50 dark:border-gray-800/40 text-gray-800 dark:text-gray-200 text-xs font-bold px-5 py-2.5 rounded-xl hover:border-brand-mint transition">
+          <i data-lucide="github" class="w-4 h-4"></i> Source Code
+        </a>
+      </div>
+    </div>
+
+    <!-- 2. FEATURED IMAGE PREVIEW -->
+    <div class="rounded-3xl overflow-hidden border border-gray-200/60 dark:border-gray-800/60">
+      <div class="relative h-64 sm:h-96 w-full bg-brand-mint-light dark:bg-gray-900 overflow-hidden">
+        <img id="projectImage" src="https://images.unsplash.com/photo-1556742049-0a670f4a4591?auto=format&fit=crop&q=80&w=1200" alt="Project Preview" class="w-full h-full object-cover">
+      </div>
+    </div>
+
+    <!-- 3. DETAILS (LEFT - BORDERLESS) + TECH SPECS SIDEBAR (RIGHT - LIGHT BORDER) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- LEFT SIDE: PROJECT DETAILS (BORDERLESS LAYOUT) -->
+      <div class="lg:col-span-7 space-y-8">
+        
+        <!-- Expanded Overview -->
+        <div class="space-y-3">
+          <h2 class="text-sm font-extrabold text-gray-900 dark:text-white flex items-center gap-2 uppercase tracking-wider text-brand-mint">
+            <i data-lucide="file-text" class="w-4 h-4"></i> Overview & Objective
+          </h2>
+          <div id="projectDescription" class="text-xs sm:text-sm text-brand-muted leading-relaxed space-y-3">
+            <p>
+              ShopEase is an end-to-end full-stack web platform built to handle multi-vendor product catalogs, customer shopping carts, and real-time merchant order tracking. Designed with a modular architecture, it bridges the gap between merchant inventory management and customer checkout experiences.
+            </p>
+            <p>
+              The platform incorporates dynamic state synchronization, secure authentication middleware, and integrated payment processors to handle concurrent shopping sessions cleanly without compromising page load speeds or user privacy.
+            </p>
+          </div>
+        </div>
+
+        <!-- Key Features List -->
+        <div class="space-y-3">
+          <h2 class="text-sm font-extrabold text-gray-900 dark:text-white flex items-center gap-2 uppercase tracking-wider text-brand-coral">
+            <i data-lucide="check-circle-2" class="w-4 h-4"></i> Key Features Engineered
+          </h2>
+
+          <div id="projectFeatures" class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-gray-700 dark:text-gray-300">
+            <div class="p-3.5 rounded-xl bg-gray-50/60 dark:bg-gray-800/30 flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-brand-mint shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="text-gray-900 dark:text-white block">Merchant Portal</strong>
+                <span class="text-[11px] text-brand-muted">Isolated admin dashboard for inventory and sales monitoring.</span>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-gray-50/60 dark:bg-gray-800/30 flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-brand-mint shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="text-gray-900 dark:text-white block">Shopping Cart</strong>
+                <span class="text-[11px] text-brand-muted">Reactive client-side cart management with persistence.</span>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-gray-50/60 dark:bg-gray-800/30 flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-brand-mint shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="text-gray-900 dark:text-white block">Stripe Checkout</strong>
+                <span class="text-[11px] text-brand-muted">Secure credit card payment gateway integration.</span>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-gray-50/60 dark:bg-gray-800/30 flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-brand-mint shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="text-gray-900 dark:text-white block">Order Tracking</strong>
+                <span class="text-[11px] text-brand-muted">Real-time status updates from processing to delivery.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE: ABOUT TECH USED (LIGHT SUBTLE BORDER) -->
+      <div class="lg:col-span-5 space-y-5">
+        
+        <!-- Tech Specs Breakdown -->
+        <div class="gcard-subtle glass p-6 rounded-3xl border border-gray-100/50 dark:border-gray-800/40 space-y-4">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-gray-900 dark:text-white border-b border-gray-100/50 dark:border-gray-800/40 pb-2.5 flex items-center gap-2">
+            <i data-lucide="cpu" class="w-4 h-4 text-brand-mint"></i> About Tech Used
+          </h3>
+
+          <div class="space-y-3 text-xs">
+            <div>
+              <span class="text-gray-400 text-[10px] uppercase font-bold tracking-wider">Backend Architecture</span>
+              <p class="font-bold text-gray-900 dark:text-white mt-0.5">PHP Laravel 10 / Node.js Express</p>
+            </div>
+
+            <div>
+              <span class="text-gray-400 text-[10px] uppercase font-bold tracking-wider">Frontend Engine</span>
+              <p class="font-bold text-gray-900 dark:text-white mt-0.5">Vue 3 (Inertia.js) / React SPA</p>
+            </div>
+
+            <div>
+              <span class="text-gray-400 text-[10px] uppercase font-bold tracking-wider">Database & Storage</span>
+              <p class="font-bold text-gray-900 dark:text-white mt-0.5">MySQL (Eloquent) / MongoDB</p>
+            </div>
+
+            <div>
+              <span class="text-gray-400 text-[10px] uppercase font-bold tracking-wider">Authentication & Security</span>
+              <p class="font-bold text-gray-900 dark:text-white mt-0.5">Sanctum Middleware / JWT Tokens</p>
+            </div>
+
+            <div>
+              <span class="text-gray-400 text-[10px] uppercase font-bold tracking-wider">Payments & Services</span>
+              <p class="font-bold text-gray-900 dark:text-white mt-0.5">Stripe Gateway API & Webhooks</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Stack Badges -->
+        <div class="gcard-subtle glass p-5 rounded-3xl border border-gray-100/50 dark:border-gray-800/40 space-y-2.5">
+          <h3 class="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Stack Badges</h3>
+          <div id="techStackBadges" class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 bg-gray-50/80 dark:bg-gray-800/40 text-gray-700 dark:text-gray-300 text-xs font-semibold rounded-lg border border-gray-100/50 dark:border-gray-800/40">PHP</span>
+            <span class="px-2.5 py-1 bg-gray-50/80 dark:bg-gray-800/40 text-gray-700 dark:text-gray-300 text-xs font-semibold rounded-lg border border-gray-100/50 dark:border-gray-800/40">Laravel</span>
+            <span class="px-2.5 py-1 bg-gray-50/80 dark:bg-gray-800/40 text-gray-700 dark:text-gray-300 text-xs font-semibold rounded-lg border border-gray-100/50 dark:border-gray-800/40">Vue.js</span>
+            <span class="px-2.5 py-1 bg-gray-50/80 dark:bg-gray-800/40 text-gray-700 dark:text-gray-300 text-xs font-semibold rounded-lg border border-gray-100/50 dark:border-gray-800/40">Inertia.js</span>
+            <span class="px-2.5 py-1 bg-gray-50/80 dark:bg-gray-800/40 text-gray-700 dark:text-gray-300 text-xs font-semibold rounded-lg border border-gray-100/50 dark:border-gray-800/40">MySQL</span>
+            <span class="px-2.5 py-1 bg-gray-50/80 dark:bg-gray-800/40 text-gray-700 dark:text-gray-300 text-xs font-semibold rounded-lg border border-gray-100/50 dark:border-gray-800/40">Stripe</span>
+          </div>
+        </div>
+
+        <!-- Resume Action Box -->
+        <div class="gcard-subtle glass p-5 rounded-3xl border border-gray-100/50 dark:border-gray-800/40 space-y-2.5 text-center">
+          <p class="text-xs text-brand-muted">Want to check Habib's full qualifications?</p>
+          <button onclick="openResumeModal()" class="w-full bg-brand-mint text-white text-xs font-bold py-2.5 rounded-xl hover:bg-brand-mint-dark transition shadow-md flex items-center justify-center gap-2">
+            <i data-lucide="download" class="w-4 h-4"></i> Download Resume
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-gray-200/50 dark:border-gray-800/40 py-6 text-center text-xs text-brand-muted mt-12">
+    <p>© 2026 Habib Hossain. All Rights Reserved.</p>
+  </footer>
+
+  <!-- RESUME DOWNLOAD MODAL -->
+  <div id="resumeModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md hidden p-4">
+    <div class="bg-white dark:bg-brand-darkCard border border-gray-200/60 dark:border-gray-800/60 rounded-3xl p-8 max-w-xl w-full relative shadow-2xl space-y-6">
+      <button onclick="closeResumeModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-900 dark:hover:text-white p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 relative pt-4">
+        <div class="hidden md:block absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[1px] bg-gray-200/50 dark:bg-gray-800/50"></div>
+
+        <div class="flex flex-col items-center text-center space-y-4 p-4 hover:bg-brand-mint-light rounded-2xl transition">
+          <div class="w-12 h-12 rounded-2xl bg-brand-mint-light text-brand-mint flex items-center justify-center">
+            <i data-lucide="layers" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-gray-900 dark:text-white">MERN Stack Resume</h4>
+            <p class="text-[10px] text-brand-muted mt-1">React, Node.js, Express, MongoDB</p>
+          </div>
+          <a href="path-to-mern-resume.pdf" download class="w-full py-2 bg-brand-mint text-white text-xs font-bold rounded-xl hover:bg-brand-mint-dark transition shadow-md flex items-center justify-center gap-2">
+            <i data-lucide="download" class="w-3.5 h-3.5"></i> Download PDF
+          </a>
+        </div>
+
+        <div class="flex flex-col items-center text-center space-y-4 p-4 hover:bg-brand-coral-light rounded-2xl transition">
+          <div class="w-12 h-12 rounded-2xl bg-brand-coral-light text-brand-coral flex items-center justify-center">
+            <i data-lucide="box" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-gray-900 dark:text-white">PHP Laravel Resume</h4>
+            <p class="text-[10px] text-brand-muted mt-1">PHP, Laravel, MySQL, Eloquent</p>
+          </div>
+          <a href="path-to-laravel-resume.pdf" download class="w-full py-2 bg-brand-coral text-white text-xs font-bold rounded-xl hover:bg-red-500 transition shadow-md flex items-center justify-center gap-2">
+            <i data-lucide="download" class="w-3.5 h-3.5"></i> Download PDF
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    lucide.createIcons();
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    if (localStorage.getItem('theme') === 'light') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+
+    function openResumeModal() {
+      document.getElementById('resumeModal').classList.remove('hidden');
+    }
+    function closeResumeModal() {
+      document.getElementById('resumeModal').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
