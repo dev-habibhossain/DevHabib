@@ -63,7 +63,7 @@ export function ContactForm() {
 
   return (
     <>
-      <div className="bg-[#3EB489] p-8 sm:p-10 rounded-3xl shadow-xl text-white">
+      <div className="bg-brand-mint p-8 sm:p-10 rounded-3xl shadow-xl text-white">
         <h3 className="text-lg font-bold mb-6">Leave us a Message</h3>
 
         {status.type === "success" && (
@@ -89,7 +89,7 @@ export function ContactForm() {
                 setFormData({ ...formData, name: e.target.value })
               }
               placeholder="Your Name"
-              className="w-full px-4 py-3 rounded-xl text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#FF7070]"
+              className="w-full px-4 py-3 rounded-xl text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-brand-coral"
               required
             />
             <input
@@ -99,7 +99,7 @@ export function ContactForm() {
                 setFormData({ ...formData, email: e.target.value })
               }
               placeholder="Your Email"
-              className="w-full px-4 py-3 rounded-xl text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#FF7070]"
+              className="w-full px-4 py-3 rounded-xl text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-brand-coral"
               required
             />
           </div>
@@ -110,7 +110,7 @@ export function ContactForm() {
               setFormData({ ...formData, message: e.target.value })
             }
             placeholder="Your Message..."
-            className="w-full px-4 py-3 rounded-xl text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#FF7070] resize-none"
+            className="w-full px-4 py-3 rounded-xl text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-brand-coral resize-none"
             required
           />
 
@@ -119,7 +119,7 @@ export function ContactForm() {
             <button
               type="submit"
               disabled={loading}
-              className="bg-[#FF7070] text-white text-xs font-bold px-8 py-3.5 rounded-xl hover:bg-red-500 transition shadow-md disabled:opacity-50 inline-flex items-center gap-2"
+              className="bg-brand-coral text-white text-xs font-bold px-8 py-3.5 rounded-xl hover:bg-red-500 transition shadow-md disabled:opacity-50 inline-flex items-center gap-2"
             >
               {loading ? (
                 <>

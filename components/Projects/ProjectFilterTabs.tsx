@@ -1,31 +1,32 @@
-"use client";
+import { ProjectCategory } from "@/lib/data";
 
 interface ProjectFilterTabsProps {
-  activeTab: string;
-  onSelectTab: (tab: string) => void;
+  categories: ProjectCategory[];
+  activeCategory: string;
+  onSelectCategory: (categoryName: string) => void;
 }
 
 export function ProjectFilterTabs({
-  activeTab,
-  onSelectTab,
+  categories,
+  activeCategory,
+  onSelectCategory,
 }: ProjectFilterTabsProps) {
-  const tabs = ["All", "Laravel", "MERN / Next"];
-
   return (
-    <div className="flex items-center space-x-2 mt-6 md:mt-0">
-      {tabs.map((tab) => {
-        const isActive = activeTab === tab;
+    <div className="flex flex-wrap gap-2">
+      {categories.map((cat) => {
+        const isActive = activeCategory === cat.name;
+
         return (
           <button
-            key={tab}
-            onClick={() => onSelectTab(tab)}
-            className={`px-4 py-2 text-xs font-semibold rounded-lg transition ${
+            key={cat.id}
+            onClick={() => onSelectCategory(cat.name)}
+            className={
               isActive
-                ? "bg-[#3EB489] text-white shadow-sm"
-                : "bg-white dark:bg-[#111827] text-gray-600 dark:text-gray-300 hover:text-[#3EB489] border border-gray-200 dark:border-[#1f2937]"
-            }`}
+                ? "px-4 py-2 bg-brand-mint text-white text-xs font-semibold rounded-lg shadow-sm"
+                : "px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-600 dark:text-gray-300 hover:text-brand-mint text-xs font-semibold rounded-lg border border-gray-200 dark:border-brand-darkBorder transition"
+            }
           >
-            {tab}
+            {cat.name}
           </button>
         );
       })}

@@ -26,7 +26,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="w-10 h-10 rounded-xl bg-gray-100 dark:bg-[#111827] border border-gray-200 dark:border-[#1f2937] text-gray-700 dark:text-amber-400 flex items-center justify-center hover:scale-105 transition shadow-sm"
+      className="w-10 h-10 rounded-xl bg-gray-100 dark:bg-brand-darkCard border border-gray-200 dark:border-brand-darkBorder text-gray-700 dark:text-amber-400 flex items-center justify-center hover:scale-105 transition shadow-sm"
       title="Toggle Light / Dark Mode"
       aria-label="Toggle Light or Dark Mode"
     >

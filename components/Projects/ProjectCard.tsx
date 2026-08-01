@@ -12,13 +12,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <div
-      className={`gcard glass rounded-3xl overflow-hidden border border-gray-100 dark:border-[#1f2937] shadow-sm group hover:shadow-lg transition duration-300 ${
-        isLaravel ? "hover:border-[#3EB489]/50" : "hover:border-[#FF7070]/50"
+      className={`gcard glass rounded-3xl overflow-hidden border border-gray-100 dark:border-brand-darkBorder shadow-sm group hover:shadow-lg transition duration-300 ${
+        isLaravel ? "hover:border-brand-mint/50" : "hover:border-brand-coral/50"
       }`}
     >
       <div
         className={`relative h-48 overflow-hidden ${
-          isLaravel ? "bg-[#3EB489]/10" : "bg-[#FF7070]/10"
+          isLaravel ? "bg-brand-mint-light" : "bg-brand-coral-light"
         } dark:bg-gray-900`}
       >
         <Image
@@ -30,7 +30,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         />
         <span
           className={`absolute top-4 left-4 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase shadow-md ${
-            isLaravel ? "bg-[#3EB489]" : "bg-[#FF7070]"
+            isLaravel ? "bg-brand-mint" : "bg-brand-coral"
           }`}
         >
           {project.badgeLabel}
@@ -40,20 +40,20 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="p-6 space-y-3">
         <h3
           className={`text-base font-bold text-gray-900 dark:text-white transition ${
-            isLaravel ? "group-hover:text-[#3EB489]" : "group-hover:text-[#FF7070]"
+            isLaravel ? "group-hover:text-brand-mint" : "group-hover:text-brand-coral"
           }`}
         >
           {project.title}
         </h3>
         <p
           className={`text-xs font-semibold ${
-            isLaravel ? "text-[#3EB489]" : "text-[#FF7070]"
+            isLaravel ? "text-brand-mint" : "text-brand-coral"
           }`}
         >
           {project.subtitle}
         </p>
 
-        <p className="text-[#9ca3af] text-xs leading-relaxed line-clamp-2">
+        <p className="text-brand-muted text-xs leading-relaxed line-clamp-2">
           {project.description}
         </p>
 
@@ -61,7 +61,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <strong>Features:</strong> {project.features}
         </p>
 
-        <div className="flex items-center justify-between pt-2 border-t border-gray-100 dark:border-[#1f2937]">
+        <div className="flex items-center justify-between pt-2 border-t border-gray-100 dark:border-brand-darkBorder">
           <span className="text-[10px] font-medium text-gray-400 truncate max-w-[170px]">
             {project.techSummary}
           </span>
@@ -71,7 +71,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               target="_blank"
               rel="noopener noreferrer"
               className={`w-7 h-7 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 flex items-center justify-center transition ${
-                isLaravel ? "hover:bg-[#3EB489]" : "hover:bg-[#FF7070]"
+                isLaravel ? "hover:bg-brand-mint" : "hover:bg-brand-coral"
               } hover:text-white`}
               title="GitHub Repository"
               aria-label={`GitHub Repository for ${project.title}`}
@@ -84,8 +84,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
               rel="noopener noreferrer"
               className={`w-7 h-7 rounded-full flex items-center justify-center transition ${
                 isLaravel
-                  ? "bg-[#3EB489]/10 text-[#3EB489] hover:bg-[#3EB489]"
-                  : "bg-[#FF7070]/10 text-[#FF7070] hover:bg-[#FF7070]"
+                  ? "bg-brand-mint-light text-brand-mint hover:bg-brand-mint"
+                  : "bg-brand-coral-light text-brand-coral hover:bg-brand-coral"
               } hover:text-white`}
               title="Live Demo"
               aria-label={`Live Demo for ${project.title}`}

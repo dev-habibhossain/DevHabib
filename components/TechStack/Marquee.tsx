@@ -46,11 +46,11 @@ export function Marquee() {
           return (
             <span
               key={`${tech.name}-${idx}`}
-              className="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-[#111827] text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-[#1f2937] shrink-0"
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-brand-darkCard text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full border border-gray-100 dark:border-brand-darkBorder shrink-0"
             >
               <IconComp
                 className={`w-3.5 h-3.5 ${
-                  isMint ? "text-[#3EB489]" : "text-[#FF7070]"
+                  isMint ? "text-brand-mint" : "text-brand-coral"
                 }`}
               />
               {tech.name}

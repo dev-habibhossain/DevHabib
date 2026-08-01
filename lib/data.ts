@@ -26,6 +26,11 @@ export interface ServiceItem {
   accent: 'mint' | 'coral';
 }
 
+export interface ProjectCategory {
+  id: string;
+  name: string;
+}
+
 export interface ProjectItem {
   id: string;
   title: string;
@@ -167,6 +172,12 @@ export const servicesData: ServiceItem[] = [
   },
 ];
 
+export const projectCategories: ProjectCategory[] = [
+  { id: 'all', name: 'All' },
+  { id: 'laravel', name: 'Laravel' },
+  { id: 'mern', name: 'MERN / Next' },
+];
+
 export const projectsData: ProjectItem[] = [
   {
     id: 'shopease',
@@ -254,6 +265,8 @@ export const projectsData: ProjectItem[] = [
   },
 ];
 
+export const projectItems: ProjectItem[] = projectsData;
+
 export const timelineData: TimelineItem[] = [
   {
     type: 'Experience',
@@ -297,3 +310,32 @@ export const contactInfoData = {
   github: 'https://github.com/habibhossain',
   linkedin: 'https://linkedin.com/in/habibhossain',
 };
+
+export const contactInfoDataList = [
+  {
+    label: 'Email',
+    value: contactInfoData.email,
+    href: `mailto:${contactInfoData.email}`,
+    iconName: 'Mail',
+    accent: 'mint' as const,
+  },
+  {
+    label: 'Phone',
+    value: contactInfoData.phone,
+    href: `tel:${contactInfoData.phone}`,
+    iconName: 'Phone',
+    accent: 'coral' as const,
+  },
+  {
+    label: 'Location',
+    value: contactInfoData.location,
+    href: null,
+    iconName: 'MapPin',
+    accent: 'mint' as const,
+  },
+];
+
+export const socialLinksData = [
+  { name: 'GitHub', href: contactInfoData.github, iconName: 'GitHubIcon' },
+  { name: 'LinkedIn', href: contactInfoData.linkedin, iconName: 'LinkedInIcon' },
+];

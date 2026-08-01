@@ -8,10 +8,10 @@ const iconMap: Record<string, React.ElementType> = {
 
 export function EducationExperience() {
   return (
-    <section id="education" className="bg-skew-section py-20 my-10">
+    <section id="education" className="w-full bg-skew-section py-20 my-10">
       <div className="max-w-5xl mx-auto px-8">
         <div className="text-center mb-10" data-aos="fade-up">
-          <span className="text-[#FF7070] font-bold text-xs uppercase tracking-wider">
+          <span className="text-brand-coral font-bold text-xs uppercase tracking-wider">
             Background
           </span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white mt-1">
@@ -27,15 +27,15 @@ export function EducationExperience() {
             return (
               <div
                 key={idx}
-                className={`gcard glass p-6 rounded-2xl border border-gray-100 dark:border-[#1f2937] shadow-sm flex items-start gap-4 transition ${
-                  isMint ? "hover:border-[#3EB489]" : "hover:border-[#FF7070]"
+                className={`gcard glass p-6 rounded-2xl border border-gray-100 dark:border-brand-darkBorder shadow-sm flex items-start gap-4 transition ${
+                  isMint ? "hover:border-brand-mint" : "hover:border-brand-coral"
                 }`}
               >
                 <div
                   className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-1 ${
                     isMint
-                      ? "bg-[#3EB489]/10 text-[#3EB489]"
-                      : "bg-[#FF7070]/10 text-[#FF7070]"
+                      ? "bg-brand-mint-light text-brand-mint"
+                      : "bg-brand-coral-light text-brand-coral"
                   }`}
                 >
                   <IconComp className="w-5 h-5" />
@@ -45,8 +45,8 @@ export function EducationExperience() {
                     <span
                       className={`text-[10px] font-bold px-2 py-0.5 rounded-full uppercase ${
                         isMint
-                          ? "bg-[#3EB489]/10 text-[#3EB489]"
-                          : "bg-[#FF7070]/10 text-[#FF7070]"
+                          ? "bg-brand-mint-light text-brand-mint"
+                          : "bg-brand-coral-light text-brand-coral"
                       }`}
                     >
                       {item.type}
@@ -58,7 +58,7 @@ export function EducationExperience() {
                   <h3 className="text-base font-bold text-gray-900 dark:text-white">
                     {item.title}
                   </h3>
-                  <p className="text-[#9ca3af] text-xs leading-relaxed">
+                  <p className="text-brand-muted text-xs leading-relaxed">
                     {item.description}
                   </p>
                 </div>

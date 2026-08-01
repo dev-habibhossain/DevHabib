@@ -12,9 +12,9 @@ export function FAQAccordion() {
   };
 
   return (
-    <section id="faq" className="max-w-4xl mx-auto px-8 py-16">
+    <section id="faq" className="w-full max-w-4xl mx-auto px-8 py-16">
       <div className="text-center mb-10" data-aos="fade-up">
-        <span className="text-[#3EB489] font-bold text-xs uppercase tracking-wider">
+        <span className="text-brand-mint font-bold text-xs uppercase tracking-wider">
           Got Questions?
         </span>
         <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white mt-1">
@@ -28,7 +28,7 @@ export function FAQAccordion() {
           return (
             <div
               key={idx}
-              className="gcard glass rounded-2xl border border-gray-100 dark:border-[#1f2937] shadow-sm p-5 transition"
+              className="gcard glass rounded-2xl border border-gray-100 dark:border-brand-darkBorder shadow-sm p-5 transition"
             >
               <button
                 onClick={() => toggleFAQ(idx)}
@@ -37,7 +37,7 @@ export function FAQAccordion() {
               >
                 <span>{faq.question}</span>
                 <span
-                  className={`text-[#3EB489] transition-transform duration-300 ${
+                  className={`text-brand-mint transition-transform duration-300 ${
                     isOpen ? "rotate-180" : ""
                   }`}
                 >
@@ -46,7 +46,7 @@ export function FAQAccordion() {
               </button>
 
               {isOpen && (
-                <p className="text-xs text-[#9ca3af] leading-relaxed mt-3 pt-2 border-t border-gray-100 dark:border-gray-800">
+                <p className="text-xs text-brand-muted leading-relaxed mt-3 pt-2 border-t border-gray-100 dark:border-gray-800">
                   {faq.answer}
                 </p>
               )}
