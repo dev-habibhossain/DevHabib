@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Send, CheckCircle2, AlertCircle, Loader2, FileText } from "lucide-react";
+import { CheckCircle2, AlertCircle, Loader2, FileText } from "lucide-react";
 import { ResumeModal } from "../ResumeModal";
 
 export function ContactForm() {
@@ -63,18 +63,20 @@ export function ContactForm() {
 
   return (
     <>
-      <div className="bg-brand-mint p-8 sm:p-10 rounded-3xl shadow-xl text-white">
-        <h3 className="text-lg font-bold mb-6">Leave us a Message</h3>
+      <div className="bg-brand-mint dark:bg-brand-darkCard dark:border dark:border-brand-mint/30 p-8 sm:p-10 rounded-3xl shadow-xl text-white">
+        <h3 className="text-lg font-bold mb-6 text-white dark:text-white flex items-center gap-2">
+          Leave us a Message
+        </h3>
 
         {status.type === "success" && (
-          <div className="flex items-center gap-2 text-xs font-semibold p-4 rounded-xl bg-white/20 text-white border border-white/30 mb-4">
+          <div className="flex items-center gap-2 text-xs font-semibold p-4 rounded-xl bg-white/20 dark:bg-emerald-950/40 text-white dark:text-brand-mint border border-white/30 dark:border-brand-mint/30 mb-4">
             <CheckCircle2 className="w-4 h-4 shrink-0" />
             {status.message}
           </div>
         )}
 
         {status.type === "error" && (
-          <div className="flex items-center gap-2 text-xs font-semibold p-4 rounded-xl bg-red-500/30 text-white border border-white/30 mb-4">
+          <div className="flex items-center gap-2 text-xs font-semibold p-4 rounded-xl bg-red-500/30 dark:bg-red-950/40 text-white dark:text-red-300 border border-white/30 dark:border-red-500/30 mb-4">
             <AlertCircle className="w-4 h-4 shrink-0" />
             {status.message}
           </div>
@@ -89,7 +91,7 @@ export function ContactForm() {
                 setFormData({ ...formData, name: e.target.value })
               }
               placeholder="Your Name"
-              className="w-full px-4 py-3 rounded-xl text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-brand-coral"
+              className="w-full px-4 py-3 rounded-xl bg-white dark:bg-gray-800/90 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-400 text-xs border border-transparent dark:border-gray-700/80 focus:outline-none focus:ring-2 focus:ring-brand-coral dark:focus:ring-brand-mint transition"
               required
             />
             <input
@@ -99,7 +101,7 @@ export function ContactForm() {
                 setFormData({ ...formData, email: e.target.value })
               }
               placeholder="Your Email"
-              className="w-full px-4 py-3 rounded-xl text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-brand-coral"
+              className="w-full px-4 py-3 rounded-xl bg-white dark:bg-gray-800/90 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-400 text-xs border border-transparent dark:border-gray-700/80 focus:outline-none focus:ring-2 focus:ring-brand-coral dark:focus:ring-brand-mint transition"
               required
             />
           </div>
@@ -110,7 +112,7 @@ export function ContactForm() {
               setFormData({ ...formData, message: e.target.value })
             }
             placeholder="Your Message..."
-            className="w-full px-4 py-3 rounded-xl text-gray-900 text-xs focus:outline-none focus:ring-2 focus:ring-brand-coral resize-none"
+            className="w-full px-4 py-3 rounded-xl bg-white dark:bg-gray-800/90 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-400 text-xs border border-transparent dark:border-gray-700/80 focus:outline-none focus:ring-2 focus:ring-brand-coral dark:focus:ring-brand-mint transition resize-none"
             required
           />
 
@@ -126,16 +128,14 @@ export function ContactForm() {
                   <Loader2 className="w-4 h-4 animate-spin" /> Sending...
                 </>
               ) : (
-                <>
-                  <Send className="w-4 h-4" /> Send Message
-                </>
+                "Send Message"
               )}
             </button>
             {/* DOWNLOAD RESUME BUTTON INSIDE FORM */}
             <button
               type="button"
               onClick={() => setIsResumeModalOpen(true)}
-              className="bg-white/10 hover:bg-white/20 border border-white/30 text-white text-xs font-bold px-6 py-3.5 rounded-xl transition flex items-center gap-2"
+              className="bg-white/10 dark:bg-brand-mint/20 hover:bg-white/20 dark:hover:bg-brand-mint/30 border border-white/30 dark:border-brand-mint/30 text-white dark:text-brand-mint-light text-xs font-bold px-6 py-3.5 rounded-xl transition flex items-center gap-2"
             >
               <FileText className="w-4 h-4" /> Download Resume
             </button>

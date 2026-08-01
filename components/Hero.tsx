@@ -2,8 +2,11 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Atom, Server, Play, Download } from "lucide-react";
+import { Play, Download } from "lucide-react";
 import { ResumeModal } from "./ResumeModal";
+import { GitHubIcon } from "./icons/GitHubIcon";
+import { LinkedInIcon } from "./icons/LinkedInIcon";
+import { contactInfoData } from "@/lib/data";
 
 export function Hero() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
@@ -79,16 +82,24 @@ export function Hero() {
               />
             </div>
 
-            {/* FLOATING TECH BADGES */}
-            <div className="glass absolute left-4 top-6 hidden sm:flex animate-float items-center gap-2 rounded-2xl px-3 py-1.5 text-xs font-semibold shadow-lg z-20">
-              <Atom className="h-4 w-4 text-brand-mint" /> React
-            </div>
-            <div
-              className="glass absolute right-4 top-20 hidden sm:flex animate-float items-center gap-2 rounded-2xl px-3 py-1.5 text-xs font-semibold shadow-lg z-20"
+            {/* FLOATING SOCIAL BADGES */}
+            <a
+              href={contactInfoData.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass absolute left-4 top-6 hidden sm:flex animate-float items-center gap-2 rounded-2xl px-3 py-1.5 text-xs font-semibold shadow-lg z-20 text-gray-900 dark:text-white hover:text-brand-mint transition"
+            >
+              <GitHubIcon className="h-4 w-4 text-brand-mint" /> GitHub
+            </a>
+            <a
+              href={contactInfoData.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass absolute right-4 top-20 hidden sm:flex animate-float items-center gap-2 rounded-2xl px-3 py-1.5 text-xs font-semibold shadow-lg z-20 text-gray-900 dark:text-white hover:text-brand-coral transition"
               style={{ animationDelay: "-2s" }}
             >
-              <Server className="h-4 w-4 text-brand-coral" /> Node.js
-            </div>
+              <LinkedInIcon className="h-4 w-4 text-brand-coral" /> LinkedIn
+            </a>
 
             {/* HERO BUTTON WITH MANGA/THOUGHT SPEECH BUBBLE */}
             <div className="absolute -bottom-10 -left-6 z-20 flex flex-col items-center">

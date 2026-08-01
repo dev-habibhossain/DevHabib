@@ -306,24 +306,24 @@ export const faqData: FAQItem[] = [
 export const contactInfoData = {
   phone: '+880 1800-000000',
   email: 'habibhossain.dev@gmail.com',
-  location: 'Lakshmipur, Chittagong, Bangladesh',
+  location: 'Lakshmipur, Bangladesh',
   github: 'https://github.com/habibhossain',
   linkedin: 'https://linkedin.com/in/habibhossain',
 };
 
 export const contactInfoDataList = [
   {
-    label: 'Email',
-    value: contactInfoData.email,
-    href: `mailto:${contactInfoData.email}`,
-    iconName: 'Mail',
-    accent: 'mint' as const,
-  },
-  {
-    label: 'Phone',
+    label: 'Phone / WhatsApp',
     value: contactInfoData.phone,
     href: `tel:${contactInfoData.phone}`,
     iconName: 'Phone',
+    accent: 'mint' as const,
+  },
+  {
+    label: 'E-mail',
+    value: contactInfoData.email,
+    href: `mailto:${contactInfoData.email}`,
+    iconName: 'Mail',
     accent: 'coral' as const,
   },
   {
