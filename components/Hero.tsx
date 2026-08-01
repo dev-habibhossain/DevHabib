@@ -7,6 +7,7 @@ import { ResumeModal } from "./ResumeModal";
 import { GitHubIcon } from "./icons/GitHubIcon";
 import { LinkedInIcon } from "./icons/LinkedInIcon";
 import { contactInfoData } from "@/lib/data";
+import heroImage from "@/public/no-bg-habib.png";
 
 export function Hero() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
@@ -82,7 +83,7 @@ export function Hero() {
             {/* HERO PORTRAIT IMAGE */}
             <div className="relative z-10 w-full h-[112%] overflow-hidden rounded-b-[50px] transform -translate-y-3">
               <Image
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800"
+                src={heroImage}
                 alt="Habib Hossain Hero"
                 fill
                 priority

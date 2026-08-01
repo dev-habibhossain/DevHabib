@@ -15,7 +15,7 @@ export function Navbar() {
         href="#"
         className="text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white"
       >
-        Habib.<span className="text-brand-mint">dev</span>
+        dev.<span className="text-brand-mint">Habib</span>
       </Link>
 
       {/* Desktop Navigation */}
