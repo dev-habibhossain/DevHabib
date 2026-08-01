@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import { projectCategories, projectItems } from "@/lib/data";
-import { ProjectFilterTabs } from "./ProjectFilterTabs";
+import { useState } from "react";
 import { ProjectCard } from "./ProjectCard";
+import { ProjectFilterTabs } from "./ProjectFilterTabs";
 
 export function Projects() {
   const [activeCategory, setActiveCategory] = useState<string>("All");

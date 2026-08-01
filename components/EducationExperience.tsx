@@ -8,8 +8,25 @@ const iconMap: Record<string, React.ElementType> = {
 
 export function EducationExperience() {
   return (
-    <section id="education" className="w-full bg-skew-section py-20 my-10">
-      <div className="max-w-5xl mx-auto px-8">
+    <section id="education" className="relative w-full bg-skew-section py-20 my-10 overflow-hidden">
+      {/* Hero Background Accents */}
+      <div className="w-32 h-32 bg-grid-dots absolute top-6 left-6 -z-10" />
+      <div className="w-32 h-32 bg-grid-dots absolute bottom-6 right-6 -z-10" />
+      <svg
+        className="absolute top-4 right-10 w-72 h-72 text-brand-mint/20 pointer-events-none -z-10 animate-float"
+        style={{ animationDelay: "-2.5s" }}
+        viewBox="0 0 200 200"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          d="M45,-62C57,-52,65,-38,68,-23C71,-8,69,8,63,22C57,36,47,48,34,56C21,64,5,68,-12,66C-29,64,-47,56,-58,43C-69,30,-73,12,-70,-4C-67,-20,-57,-34,-45,-44C-33,-54,-19,-60,-2,-57C15,-54,33,-72,45,-62Z"
+          transform="translate(100 100)"
+        />
+      </svg>
+
+      <div className="max-w-5xl mx-auto px-8 relative z-10">
         <div className="text-center mb-10" data-aos="fade-up">
           <span className="text-brand-coral font-bold text-xs uppercase tracking-wider">
             Background

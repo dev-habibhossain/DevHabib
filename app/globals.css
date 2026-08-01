@@ -30,11 +30,11 @@
   --color-brand-muted: #9ca3af;
 }
 
-/* Subtle dot grid pattern */
+/* Noticeable dot grid pattern */
 .bg-grid-dots {
-  background-image: radial-gradient(#3EB489 1px, transparent 1px);
+  background-image: radial-gradient(#3EB489 1.2px, transparent 1.2px);
   background-size: 14px 14px;
-  opacity: 0.2;
+  opacity: 0.35;
 }
 
 /* Asymmetric Section Dividers */

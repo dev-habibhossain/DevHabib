@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { contactInfoData } from "@/lib/data";
+import { Download, Play } from "lucide-react";
 import Image from "next/image";
-import { Play, Download } from "lucide-react";
+import { useState } from "react";
 import { ResumeModal } from "./ResumeModal";
 import { GitHubIcon } from "./icons/GitHubIcon";
 import { LinkedInIcon } from "./icons/LinkedInIcon";
-import { contactInfoData } from "@/lib/data";
 
 export function Hero() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
