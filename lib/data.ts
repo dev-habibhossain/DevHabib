@@ -26,6 +26,11 @@ export interface ServiceItem {
   accent: 'mint' | 'coral';
 }
 
+export interface ProjectCategory {
+  id: string;
+  name: string;
+}
+
 export interface ProjectItem {
   id: string;
   title: string;
@@ -167,6 +172,12 @@ export const servicesData: ServiceItem[] = [
   },
 ];
 
+export const projectCategories: ProjectCategory[] = [
+  { id: 'all', name: 'All' },
+  { id: 'laravel', name: 'Laravel' },
+  { id: 'mern', name: 'MERN / Next' },
+];
+
 export const projectsData: ProjectItem[] = [
   {
     id: 'shopease',
@@ -254,6 +265,8 @@ export const projectsData: ProjectItem[] = [
   },
 ];
 
+export const projectItems: ProjectItem[] = projectsData;
+
 export const timelineData: TimelineItem[] = [
   {
     type: 'Experience',
@@ -285,15 +298,44 @@ export const faqData: FAQItem[] = [
     answer: "Yes, I am actively seeking full-time remote or on-site developer positions. I am based in Lakshmipur, Bangladesh, and ready to adapt to your team's workflow and timezone.",
   },
   {
-    question: 'How do you handle project timeline and communication?',
-    answer: 'I maintain active communication via WhatsApp, Slack, GitHub, or Email with regular updates, clear documentation, and clean code version control.',
+    question: 'How quickly can you start?',
+    answer: 'I am available immediately and ready to contribute to projects right away.',
   },
 ];
 
 export const contactInfoData = {
   phone: '+880 1800-000000',
   email: 'habibhossain.dev@gmail.com',
-  location: 'Lakshmipur, Chittagong, Bangladesh',
+  location: 'Lakshmipur, Bangladesh',
   github: 'https://github.com/habibhossain',
   linkedin: 'https://linkedin.com/in/habibhossain',
 };
+
+export const contactInfoDataList = [
+  {
+    label: 'Phone / WhatsApp',
+    value: contactInfoData.phone,
+    href: `tel:${contactInfoData.phone}`,
+    iconName: 'Phone',
+    accent: 'mint' as const,
+  },
+  {
+    label: 'E-mail',
+    value: contactInfoData.email,
+    href: `mailto:${contactInfoData.email}`,
+    iconName: 'Mail',
+    accent: 'coral' as const,
+  },
+  {
+    label: 'Location',
+    value: contactInfoData.location,
+    href: null,
+    iconName: 'MapPin',
+    accent: 'mint' as const,
+  },
+];
+
+export const socialLinksData = [
+  { name: 'GitHub', href: contactInfoData.github, iconName: 'GitHubIcon' },
+  { name: 'LinkedIn', href: contactInfoData.linkedin, iconName: 'LinkedInIcon' },
+];

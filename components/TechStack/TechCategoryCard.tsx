@@ -18,15 +18,15 @@ export function TechCategoryCard({ category }: TechCategoryCardProps) {
 
   return (
     <div
-      className={`gcard glass p-6 rounded-3xl border border-gray-100 dark:border-[#1f2937] shadow-sm space-y-4 transition ${
-        isMint ? "hover:border-[#3EB489]" : "hover:border-[#FF7070]"
+      className={`gcard glass p-6 rounded-3xl border border-gray-100 dark:border-brand-darkBorder shadow-sm space-y-4 transition ${
+        isMint ? "hover:border-brand-mint" : "hover:border-brand-coral"
       }`}
     >
       <div
         className={`w-10 h-10 rounded-xl flex items-center justify-center ${
           isMint
-            ? "bg-[#3EB489]/10 text-[#3EB489]"
-            : "bg-[#FF7070]/10 text-[#FF7070]"
+            ? "bg-brand-mint-light text-brand-mint"
+            : "bg-brand-coral-light text-brand-coral"
         }`}
       >
         <IconComp className="w-5 h-5" />
