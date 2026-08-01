@@ -1,12 +1,12 @@
 "use client";
 
-import { contactInfoData } from "@/lib/data";
-import { Download, Play } from "lucide-react";
-import Image from "next/image";
 import { useState } from "react";
+import Image from "next/image";
+import { Play, Download } from "lucide-react";
 import { ResumeModal } from "./ResumeModal";
 import { GitHubIcon } from "./icons/GitHubIcon";
 import { LinkedInIcon } from "./icons/LinkedInIcon";
+import { contactInfoData } from "@/lib/data";
 
 export function Hero() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
@@ -53,8 +53,9 @@ export function Hero() {
 
         {/* Hero Graphic Stack (Right) */}
         <div className="lg:col-span-7 flex justify-center relative" data-aos="fade-left">
+          {/* Animated Vector Spiral SVG Shape */}
           <svg
-            className="absolute -top-10 left-10 w-[380px] h-[380px] sm:w-[460px] sm:h-[460px] text-brand-mint/20 pointer-events-none -z-10"
+            className="absolute -top-10 left-10 w-[380px] h-[380px] sm:w-[460px] sm:h-[460px] text-brand-mint/20 pointer-events-none -z-10 animate-float"
             viewBox="0 0 200 200"
           >
             <path
@@ -67,8 +68,16 @@ export function Hero() {
           </svg>
 
           <div className="relative w-[310px] h-[360px] sm:w-[380px] sm:h-[430px] flex items-center justify-center">
-            <div className="absolute inset-0 bg-brand-coral/80 rounded-[50px] transform -rotate-3" />
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-brand-mint rounded-[35px] -z-10" />
+            {/* Animated Floating Coral Card Background */}
+            <div
+              className="absolute inset-0 bg-brand-coral/80 rounded-[50px] transform -rotate-3 animate-float"
+              style={{ animationDelay: "-1s" }}
+            />
+            {/* Animated Floating Mint Accent Box */}
+            <div
+              className="absolute -bottom-4 -right-4 w-32 h-32 bg-brand-mint rounded-[35px] -z-10 animate-float"
+              style={{ animationDelay: "-3s" }}
+            />
 
             {/* HERO PORTRAIT IMAGE */}
             <div className="relative z-10 w-full h-[112%] overflow-hidden rounded-b-[50px] transform -translate-y-3">
