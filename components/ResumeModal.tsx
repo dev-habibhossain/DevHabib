@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { X, FileText, Download } from "lucide-react";
+import { personalInfo } from "@/data";
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -81,11 +82,8 @@ export function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
               </p>
             </div>
             <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                alert("MERN Resume PDF download started.");
-              }}
+              href={personalInfo.mernResumeUrl}
+              download
               className="inline-flex items-center justify-center gap-2 bg-brand-mint text-white text-xs font-semibold px-4 py-2.5 rounded-xl hover:bg-brand-mint-dark transition shadow-sm cursor-pointer"
             >
               <Download className="w-4 h-4" /> Download PDF
@@ -106,11 +104,8 @@ export function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
               </p>
             </div>
             <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                alert("Laravel Resume PDF download started.");
-              }}
+              href={personalInfo.laravelResumeUrl}
+              download
               className="inline-flex items-center justify-center gap-2 bg-brand-coral text-white text-xs font-semibold px-4 py-2.5 rounded-xl hover:bg-red-500 transition shadow-sm cursor-pointer"
             >
               <Download className="w-4 h-4" /> Download PDF

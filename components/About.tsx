@@ -1,5 +1,6 @@
 import Image from "next/image";
 import aboutImage from "@/public/no-bg-habib.png";
+import { personalInfo } from "@/data";
 
 export function About() {
   return (
@@ -14,7 +15,7 @@ export function About() {
           <div className="relative w-full h-full overflow-hidden rounded-[40px] bg-gradient-to-b from-brand-mint/20 to-brand-coral/10">
             <Image
               src={aboutImage}
-              alt="Habib Hossain About"
+              alt={`${personalInfo.name} About`}
               fill
               priority
               quality={100}
@@ -35,11 +36,11 @@ export function About() {
         </h2>
 
         <p className="text-brand-muted text-sm sm:text-base leading-relaxed max-w-xl">
-          I am a passionate Full Stack Developer specializing in both the MERN Stack and PHP Laravel. I enjoy building clean, scalable, responsive, and user-friendly web applications.
+          {personalInfo.aboutBio}
         </p>
 
         <p className="text-brand-muted text-sm sm:text-base leading-relaxed max-w-xl">
-          I continuously learn modern technologies and best practices to improve my skills and create high-quality digital products. Based in Lakshmipur, Bangladesh, I am open to Remote & On-site opportunities.
+          Based in {personalInfo.location}, I am open to Remote & On-site opportunities worldwide.
         </p>
 
         <div>
