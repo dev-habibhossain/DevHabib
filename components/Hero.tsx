@@ -87,7 +87,9 @@ export function Hero() {
                 alt="Habib Hossain Hero"
                 fill
                 priority
-                sizes="(max-width: 768px) 310px, 380px"
+                quality={100}
+                unoptimized
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
                 className="object-cover object-top"
               />
             </div>
