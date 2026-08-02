@@ -1,4 +1,6 @@
 import Image from "next/image";
+import aboutImage from "@/public/no-bg-habib.png";
+import { personalInfo } from "@/data";
 
 export function About() {
   return (
@@ -10,13 +12,16 @@ export function About() {
       <div className="lg:col-span-5 flex justify-center relative" data-aos="fade-right">
         <div className="relative w-72 h-80 sm:w-80 sm:h-96 bg-brand-coral/80 rounded-[40px] flex items-end justify-center">
           {/* ABOUT PORTRAIT IMAGE */}
-          <div className="relative w-full h-full overflow-hidden rounded-[40px]">
+          <div className="relative w-full h-full overflow-hidden rounded-[40px] bg-gradient-to-b from-brand-mint/20 to-brand-coral/10">
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800"
-              alt="Habib Hossain About"
+              src={aboutImage}
+              alt={`${personalInfo.name} About`}
               fill
-              sizes="(max-width: 640px) 288px, 320px"
-              className="object-cover"
+              priority
+              quality={100}
+              unoptimized
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
+              className="object-cover object-top"
             />
           </div>
 
@@ -31,11 +36,11 @@ export function About() {
         </h2>
 
         <p className="text-brand-muted text-sm sm:text-base leading-relaxed max-w-xl">
-          I am a passionate Full Stack Developer specializing in both the MERN Stack and PHP Laravel. I enjoy building clean, scalable, responsive, and user-friendly web applications.
+          {personalInfo.aboutBio}
         </p>
 
         <p className="text-brand-muted text-sm sm:text-base leading-relaxed max-w-xl">
-          I continuously learn modern technologies and best practices to improve my skills and create high-quality digital products. Based in Lakshmipur, Bangladesh, I am open to Remote & On-site opportunities.
+          Based in {personalInfo.location}, I am open to Remote & On-site opportunities worldwide.
         </p>
 
         <div>

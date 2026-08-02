@@ -121,7 +121,7 @@ export function ContactForm() {
             <button
               type="submit"
               disabled={loading}
-              className="bg-brand-coral text-white text-xs font-bold px-8 py-3.5 rounded-xl hover:bg-red-500 transition shadow-md disabled:opacity-50 inline-flex items-center gap-2"
+              className="bg-brand-coral text-white text-xs font-bold px-8 py-3.5 rounded-xl hover:bg-red-500 transition shadow-md disabled:opacity-50 inline-flex items-center gap-2 cursor-pointer"
             >
               {loading ? (
                 <>
@@ -135,7 +135,7 @@ export function ContactForm() {
             <button
               type="button"
               onClick={() => setIsResumeModalOpen(true)}
-              className="bg-white/10 dark:bg-brand-mint/20 hover:bg-white/20 dark:hover:bg-brand-mint/30 border border-white/30 dark:border-brand-mint/30 text-white dark:text-brand-mint-light text-xs font-bold px-6 py-3.5 rounded-xl transition flex items-center gap-2"
+              className="bg-white/10 dark:bg-brand-mint/20 hover:bg-white/20 dark:hover:bg-brand-mint/30 border border-white/30 dark:border-brand-mint/30 text-white dark:text-brand-mint text-xs font-bold px-6 py-3.5 rounded-xl transition flex items-center gap-2 cursor-pointer"
             >
               <FileText className="w-4 h-4" /> Download Resume
             </button>

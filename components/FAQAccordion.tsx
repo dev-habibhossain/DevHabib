@@ -45,28 +45,34 @@ export function FAQAccordion() {
           return (
             <div
               key={idx}
-              className="gcard glass rounded-2xl border border-gray-100 dark:border-brand-darkBorder shadow-sm p-5 transition"
+              onClick={() => toggleFAQ(idx)}
+              className="gcard glass rounded-2xl border border-gray-100 dark:border-brand-darkBorder shadow-sm p-5 transition-all duration-300 cursor-pointer select-none hover:border-brand-mint/50"
             >
-              <button
-                onClick={() => toggleFAQ(idx)}
-                className="w-full flex items-center justify-between font-bold text-sm text-left text-gray-900 dark:text-white focus:outline-none"
-                aria-expanded={isOpen}
-              >
+              <div className="w-full flex items-center justify-between font-bold text-sm text-left text-gray-900 dark:text-white">
                 <span>{faq.question}</span>
                 <span
-                  className={`text-brand-mint transition-transform duration-300 ${
+                  className={`text-brand-mint transition-transform duration-300 shrink-0 ml-4 ${
                     isOpen ? "rotate-180" : ""
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
                 </span>
-              </button>
+              </div>
 
-              {isOpen && (
-                <p className="text-xs text-brand-muted leading-relaxed mt-3 pt-2 border-t border-gray-100 dark:border-gray-800">
-                  {faq.answer}
-                </p>
-              )}
+              {/* Smooth Grid Expand/Collapse Container */}
+              <div
+                className={`grid transition-[grid-template-rows,opacity,margin,padding] duration-300 ease-in-out ${
+                  isOpen
+                    ? "grid-rows-[1fr] opacity-100 mt-3 pt-2 border-t border-gray-100 dark:border-gray-800/80"
+                    : "grid-rows-[0fr] opacity-0 mt-0 pt-0 border-t-0 border-transparent"
+                }`}
+              >
+                <div className="overflow-hidden">
+                  <p className="text-xs text-brand-muted leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              </div>
             </div>
           );
         })}

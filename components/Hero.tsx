@@ -6,7 +6,8 @@ import { Play, Download } from "lucide-react";
 import { ResumeModal } from "./ResumeModal";
 import { GitHubIcon } from "./icons/GitHubIcon";
 import { LinkedInIcon } from "./icons/LinkedInIcon";
-import { contactInfoData } from "@/lib/data";
+import { contactInfoData, personalInfo } from "@/data";
+import heroImage from "@/public/no-bg-habib.png";
 
 export function Hero() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
@@ -22,16 +23,16 @@ export function Hero() {
           <div className="w-16 h-12 bg-grid-dots absolute -top-8 -left-6 -z-10" />
 
           <span className="inline-block px-3 py-1 bg-brand-mint-light text-brand-mint font-bold text-xs rounded-full uppercase tracking-wider border border-brand-mint/20">
-            Full Stack Developer
+            {personalInfo.badgeLabel}
           </span>
 
           <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-extrabold text-gray-900 dark:text-white leading-[1.12] tracking-tight">
-            Habib Hossain<br />
-            <span className="text-brand-mint">Full Stack Developer</span>
+            {personalInfo.name}<br />
+            <span className="text-brand-mint">{personalInfo.title}</span>
           </h1>
 
           <p className="text-brand-muted text-sm sm:text-base leading-relaxed max-w-md">
-            Building modern, scalable, and user-focused web applications with MERN Stack & PHP Laravel.
+            {personalInfo.shortBio}
           </p>
 
           {/* Action Buttons */}
@@ -82,11 +83,13 @@ export function Hero() {
             {/* HERO PORTRAIT IMAGE */}
             <div className="relative z-10 w-full h-[112%] overflow-hidden rounded-b-[50px] transform -translate-y-3">
               <Image
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800"
+                src={heroImage}
                 alt="Habib Hossain Hero"
                 fill
                 priority
-                sizes="(max-width: 768px) 310px, 380px"
+                quality={100}
+                unoptimized
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
                 className="object-cover object-top"
               />
             </div>
