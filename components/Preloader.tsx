@@ -64,7 +64,7 @@ export function Preloader() {
             {/* Giant DevHabib Logo Typography */}
             <div className="relative font-black tracking-tighter text-6xl sm:text-8xl md:text-9xl uppercase font-sans">
               {/* Dimmed Base Layer */}
-              <span className="text-[#252a36]">DevHabib</span>
+              <span className="text-[#252a36]">Dev.Habib</span>
 
               {/* Rising Liquid Wave Fill Layer */}
               <span
@@ -73,7 +73,7 @@ export function Preloader() {
                   clipPath: `inset(${100 - progress}% 0 0 0)`,
                 }}
               >
-                DevHabib
+                Dev.Habib
               </span>
             </div>
           </motion.div>
