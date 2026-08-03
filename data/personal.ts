@@ -18,7 +18,7 @@ export const personalInfo = {
   email: "habibfahim71@gmail.com",
   location: "Lakshmipur, Bangladesh",
 
-  github: "https://github.com/DevHabib",
+  github: "https://github.com/dev-habibhossain",
   linkedin: "https://www.linkedin.com/in/dev-habibhossain",
   facebook: "https://www.facebook.com/devhabibhossain",
   twitter: "",

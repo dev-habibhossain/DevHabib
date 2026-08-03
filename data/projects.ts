@@ -50,9 +50,9 @@ export const projectsData: ProjectItem[] = [
     ],
     techSummary:
       'React • Node.js • Express • MongoDB • JWT • Stripe',
-    githubUrl: 'https://github.com/DevHabib',
+    githubUrl: 'https://github.com/dev-habibhossain/tourasia',
     liveUrl: '#',
-    image: '/projects/metoffice.webp',
+    image: '',
   },
 
   {
@@ -76,7 +76,7 @@ export const projectsData: ProjectItem[] = [
       'Next.js • TypeScript • MongoDB • NextAuth',
     githubUrl: 'https://github.com/DevHabib',
     liveUrl: '#',
-    image: '/projects/suitetrack.webp',
+    image: '',
   },
 
   {
@@ -100,7 +100,7 @@ export const projectsData: ProjectItem[] = [
       'Laravel • Vue.js • MySQL • Stripe',
     githubUrl: 'https://github.com/DevHabib',
     liveUrl: '#',
-    image: '/projects/shopease.webp',
+    image: '/shopEase.png',
   },
 
   {
@@ -124,7 +124,7 @@ export const projectsData: ProjectItem[] = [
       'React • Express • MongoDB • Firebase',
     githubUrl: 'https://github.com/DevHabib',
     liveUrl: '#',
-    image: '/projects/tour-asia.webp',
+    image: '/TourAsia.png',
   },
 
   {
@@ -147,7 +147,7 @@ export const projectsData: ProjectItem[] = [
       'React • Tailwind CSS • Firebase',
     githubUrl: 'https://github.com/DevHabib',
     liveUrl: '#',
-    image: '/projects/supreme-gadgets.webp',
+    image: '',
   },
 
   {
@@ -169,7 +169,7 @@ export const projectsData: ProjectItem[] = [
       'React • Tailwind CSS • Firebase',
     githubUrl: 'https://github.com/DevHabib',
     liveUrl: '#',
-    image: '/projects/greenguide.webp',
+    image: '',
   },
 ];
 
