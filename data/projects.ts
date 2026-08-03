@@ -30,89 +30,146 @@ export const projectCategories: ProjectCategory[] = [
 
 export const projectsData: ProjectItem[] = [
   {
-    id: 'shopease',
-    title: 'ShopEase',
-    subtitle: 'E-Commerce Platform',
-    category: 'Laravel',
-    badgeLabel: 'Laravel / Vue',
-    description: 'Full-featured e-commerce system with merchant portal, product catalog, cart, and Stripe payment processing.',
-    features: 'Merchant Dashboard, Cart, Stripe',
-    techTags: ['PHP', 'Laravel', 'Vue.js', 'MySQL', 'Stripe'],
-    techSummary: 'PHP, Laravel, Vue.js, MySQL, Stripe',
-    githubUrl: 'https://github.com/habibhossain',
-    liveUrl: '#',
-    image: 'https://images.unsplash.com/photo-1556742049-0a670f4a4591?auto=format&fit=crop&q=80&w=800',
-  },
-  {
     id: 'metoffice',
     title: 'MetOffice',
-    subtitle: 'Employee & HR Platform',
+    subtitle: 'Employee Management System',
     category: 'MERN / Next',
-    badgeLabel: 'MERN Stack',
-    description: 'Comprehensive HR management platform for tracking employee records, payroll, attendance, and internal updates.',
-    features: 'JWT Auth, HR Analytics, Payroll Stripe',
-    techTags: ['React', 'Node.js', 'Express', 'MongoDB'],
-    techSummary: 'React, Node.js, Express, MongoDB',
-    githubUrl: 'https://github.com/habibhossain',
+    badgeLabel: 'Featured',
+    description:
+      'A full-stack employee management platform with role-based dashboards, authentication, payroll, and employee workflow management.',
+    features:
+      'Role-Based Dashboard • JWT Auth • Stripe Payments • Employee Management',
+    techTags: [
+      'React',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'JWT',
+      'Stripe',
+      'Tailwind CSS',
+    ],
+    techSummary:
+      'React • Node.js • Express • MongoDB • JWT • Stripe',
+    githubUrl: 'https://github.com/DevHabib',
     liveUrl: '#',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800',
+    image: '/projects/metoffice.webp',
   },
+
   {
     id: 'suitetrack',
-    title: 'Suitetrack',
+    title: 'SuiteTrack',
     subtitle: 'Hotel Management Platform',
     category: 'MERN / Next',
-    badgeLabel: 'Next.js / TS',
-    description: 'Modern hotel suite management system for booking suites, managing reservations, and guest workflows.',
-    features: 'Suite Booking, Real-time Status',
-    techTags: ['Next.js', 'TypeScript', 'MongoDB'],
-    techSummary: 'Next.js, TypeScript, MongoDB',
-    githubUrl: 'https://github.com/habibhossain',
+    badgeLabel: 'Next.js',
+    description:
+      'A hotel booking and management platform with room reservations, authentication, and an intuitive admin dashboard.',
+    features:
+      'Room Booking • Admin Dashboard • Authentication • Responsive UI',
+    techTags: [
+      'Next.js',
+      'TypeScript',
+      'MongoDB',
+      'Tailwind CSS',
+      'NextAuth',
+    ],
+    techSummary:
+      'Next.js • TypeScript • MongoDB • NextAuth',
+    githubUrl: 'https://github.com/DevHabib',
     liveUrl: '#',
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800',
+    image: '/projects/suitetrack.webp',
   },
+
   {
-    id: 'greenguide',
-    title: 'GreenGuide',
-    subtitle: 'Sustainability Platform',
-    category: 'MERN / Next',
-    badgeLabel: 'Web App',
-    description: 'Web application helping users discover eco-friendly practices, sustainability guides, and community tips.',
-    features: 'Resource Library, Guides',
-    techTags: ['React', 'JavaScript', 'Tailwind CSS'],
-    techSummary: 'React, JavaScript, Tailwind CSS',
-    githubUrl: 'https://github.com/habibhossain',
+    id: 'shopease',
+    title: 'ShopEase',
+    subtitle: 'Multi-Vendor E-Commerce',
+    category: 'Laravel',
+    badgeLabel: 'Laravel',
+    description:
+      'A modern multi-vendor e-commerce application featuring merchant management, product catalog, shopping cart, and secure online payments.',
+    features:
+      'Merchant Dashboard • Product Management • Shopping Cart • Stripe',
+    techTags: [
+      'PHP',
+      'Laravel',
+      'Vue.js',
+      'MySQL',
+      'Stripe',
+    ],
+    techSummary:
+      'Laravel • Vue.js • MySQL • Stripe',
+    githubUrl: 'https://github.com/DevHabib',
     liveUrl: '#',
-    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800',
+    image: '/projects/shopease.webp',
   },
+
   {
     id: 'tour-asia',
     title: 'Tour Asia',
     subtitle: 'Tourism Booking Platform',
     category: 'MERN / Next',
-    badgeLabel: 'Travel Web',
-    description: 'Travel booking platform showcasing Asian tour packages, custom itineraries, and travel bookings.',
-    features: 'Tour Packages, Booking System',
-    techTags: ['Full Stack', 'Web Tech'],
-    techSummary: 'Full Stack Web Technologies',
-    githubUrl: 'https://github.com/habibhossain',
+    badgeLabel: 'MERN',
+    description:
+      'A tourism platform where users can browse destinations, book tour packages, and manage travel experiences.',
+    features:
+      'Tour Packages • Booking • Authentication • User Dashboard',
+    techTags: [
+      'React',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Firebase',
+    ],
+    techSummary:
+      'React • Express • MongoDB • Firebase',
+    githubUrl: 'https://github.com/DevHabib',
     liveUrl: '#',
-    image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=800',
+    image: '/projects/tour-asia.webp',
   },
+
   {
     id: 'supreme-gadgets',
     title: 'Supreme Gadgets',
-    subtitle: 'Tech Gadgets Store',
+    subtitle: 'E-Commerce Store',
     category: 'MERN / Next',
-    badgeLabel: 'E-Commerce',
-    description: 'E-commerce platform for tech gadgets, electronics filtering, interactive search, and shopping cart.',
-    features: 'Product Filtering, Cart & Checkout',
-    techTags: ['React', 'Tailwind CSS', 'Web API'],
-    techSummary: 'React, Tailwind CSS, Web API',
-    githubUrl: 'https://github.com/habibhossain',
+    badgeLabel: 'React',
+    description:
+      'An online gadget store with product browsing, filtering, shopping cart, and responsive shopping experience.',
+    features:
+      'Product Search • Categories • Shopping Cart • Responsive Design',
+    techTags: [
+      'React',
+      'Tailwind CSS',
+      'Firebase',
+      'REST API',
+    ],
+    techSummary:
+      'React • Tailwind CSS • Firebase',
+    githubUrl: 'https://github.com/DevHabib',
     liveUrl: '#',
-    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800',
+    image: '/projects/supreme-gadgets.webp',
+  },
+
+  {
+    id: 'greenguide',
+    title: 'GreenGuide',
+    subtitle: 'Sustainability Platform',
+    category: 'MERN / Next',
+    badgeLabel: 'Community',
+    description:
+      'A community-driven platform promoting sustainable living through eco-friendly resources, tips, and educational content.',
+    features:
+      'Community Resources • Articles • Responsive Design',
+    techTags: [
+      'React',
+      'Tailwind CSS',
+      'Firebase',
+    ],
+    techSummary:
+      'React • Tailwind CSS • Firebase',
+    githubUrl: 'https://github.com/DevHabib',
+    liveUrl: '#',
+    image: '/projects/greenguide.webp',
   },
 ];
 
-export const projectItems: ProjectItem[] = projectsData;

@@ -34,8 +34,8 @@ export function TechStack() {
       {/* Marquee Ticker FIRST (matching static design layout) */}
       <Marquee />
 
-      {/* Tech Category Cards SECOND */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Tech Category Cards SECOND - 2x2 layout gives cards wider width for skills to flow horizontally */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {techCategories.map((cat) => (
           <TechCategoryCard key={cat.id} category={cat} />
         ))}

@@ -1,22 +1,28 @@
 /**
  * Personal Details & Contact Information
- * Replace dummy data here with your actual real personal details.
  */
 export const personalInfo = {
   name: "Habib Hossain",
-  title: "Full Stack Developer",
-  badgeLabel: "Full Stack Developer",
-  shortBio: "Building modern, scalable, and user-focused web applications with MERN Stack & PHP Laravel.",
-  aboutBio: "I am Habib Hossain, a passionate Full Stack Developer specializing in building modern web applications. Proficient in both MERN Stack (MongoDB, Express, React, Node) and PHP Laravel framework, I enjoy transforming ideas into functional, clean, and optimized web products.",
-  phone: "+880 1800-000000",
-  email: "habibhossain.dev@gmail.com",
+
+  title: "Junior MERN & Laravel Developer",
+
+  badgeLabel: "Open to Work",
+
+  shortBio:
+    "Junior Full-Stack Developer passionate about building modern, responsive, and scalable web applications using the MERN Stack and Laravel.",
+
+  aboutBio:
+    "I'm Habib Hossain, a Junior Full-Stack Developer from Bangladesh with a strong passion for creating clean, user-friendly, and high-performance web applications. I primarily work with the MERN Stack (MongoDB, Express.js, React, Next.js, Node.js) and PHP Laravel. I enjoy learning new technologies, solving real-world problems, and continuously improving my development skills through hands-on projects. I'm currently seeking opportunities as a MERN Stack, React/Next.js, or Laravel Developer where I can contribute, grow, and collaborate with experienced teams.",
+
+  phone: "+8801763153560",
+  email: "habibfahim71@gmail.com",
   location: "Lakshmipur, Bangladesh",
-  github: "https://github.com/habibhossain",
-  linkedin: "https://linkedin.com/in/habibhossain",
-  facebook: "https://facebook.com",
-  twitter: "https://twitter.com",
-  
-  // Resume PDF download file links (place files in public/ folder)
-  mernResumeUrl: "/Habib_Hossain_MERN_Stack_Developer.pdf",
-  laravelResumeUrl: "/Habib_Hossain_Laravel_Developer.pdf",
+
+  github: "https://github.com/DevHabib",
+  linkedin: "https://www.linkedin.com/in/dev-habibhossain",
+  facebook: "https://www.facebook.com/devhabibhossain",
+  twitter: "",
+
+  mernResumeUrl: "/Habib_Hossain_MERN_Developer_Resume.pdf",
+  laravelResumeUrl: "/Habib_Hossain_Laravel_Developer_Resume.pdf",
 };

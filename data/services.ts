@@ -13,44 +13,50 @@ export interface ServiceItem {
 export const servicesData: ServiceItem[] = [
   {
     id: 's1',
-    title: 'Full Stack Web Development',
-    description: 'End-to-end modern web applications built using MERN Stack or PHP Laravel architecture.',
-    iconName: 'Code2',
+    title: 'Frontend Development',
+    description:
+      'Build modern, responsive, and interactive user interfaces using React, Next.js, TypeScript, Tailwind CSS, and Bootstrap.',
+    iconName: 'Monitor',
     accent: 'mint',
   },
   {
     id: 's2',
     title: 'MERN Stack Development',
-    description: 'Fast, scalable SPAs with MongoDB, Express.js, React, Next.js, and Node.js.',
+    description:
+      'Develop full-stack web applications using MongoDB, Express.js, React, Next.js, and Node.js with clean and scalable code.',
     iconName: 'Layers',
     accent: 'coral',
   },
   {
     id: 's3',
-    title: 'PHP Laravel Development',
-    description: 'Robust web solutions, MVC backends, and relational database integrations with PHP & Laravel.',
+    title: 'Laravel Development',
+    description:
+      'Create secure and maintainable web applications with PHP Laravel, MySQL, Blade, and RESTful APIs.',
     iconName: 'Server',
     accent: 'mint',
   },
   {
     id: 's4',
-    title: 'REST API & Auth Systems',
-    description: 'Secure REST API development, JWT authentication mechanisms, and seamless middleware integration.',
-    iconName: 'Cpu',
+    title: 'API Integration & Authentication',
+    description:
+      'Integrate REST APIs, implement JWT and NextAuth authentication, and connect third-party services like Stripe and Firebase.',
+    iconName: 'ShieldCheck',
     accent: 'coral',
   },
   {
     id: 's5',
-    title: 'Responsive Website & Dashboards',
-    description: 'Mobile-first responsive frontend design and custom admin dashboard development using Tailwind CSS & Bootstrap.',
-    iconName: 'Layout',
+    title: 'Responsive UI & Dashboards',
+    description:
+      'Design mobile-first websites, admin dashboards, and reusable UI components with a clean, modern user experience.',
+    iconName: 'LayoutDashboard',
     accent: 'mint',
   },
   {
     id: 's6',
-    title: 'Database Design & Optimization',
-    description: 'Database schema modeling with MongoDB & MySQL, bug fixing, and web performance optimization.',
-    iconName: 'Database',
+    title: 'Deployment & Maintenance',
+    description:
+      'Deploy applications on Vercel, manage Git/GitHub workflows, fix bugs, and improve application performance.',
+    iconName: 'Rocket',
     accent: 'coral',
   },
 ];
