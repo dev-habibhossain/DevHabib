@@ -1,6 +1,6 @@
 "use client";
 
-import { projectCategories, projectItems } from "@/lib/data";
+import { projectCategories, projectsData } from "@/lib/data";
 import { useState } from "react";
 import { ProjectCard } from "./ProjectCard";
 import { ProjectFilterTabs } from "./ProjectFilterTabs";
@@ -10,8 +10,8 @@ export function Projects() {
 
   const filteredProjects =
     activeCategory === "All"
-      ? projectItems
-      : projectItems.filter((item) => item.category === activeCategory);
+      ? projectsData
+      : projectsData.filter((item) => item.category === activeCategory);
 
   return (
     <section id="projects" className="w-full max-w-7xl mx-auto px-8 py-20">
