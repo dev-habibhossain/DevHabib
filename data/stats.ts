@@ -10,8 +10,28 @@ export interface StatItem {
 }
 
 export const statsData: StatItem[] = [
-  { count: 6, suffix: '+', label: 'Real Projects Built', color: 'mint' },
-  { count: 12, suffix: '+', label: 'Tech Skills Mastered', color: 'coral' },
-  { count: 2, suffix: '', label: 'Full Stacks (MERN + Laravel)', color: 'mint' },
-  { count: 100, suffix: '%', label: 'Remote/On-site Ready', color: 'coral' },
+  {
+    count: 6,
+    suffix: '+',
+    label: 'Projects Completed',
+    color: 'mint',
+  },
+  {
+    count: 20,
+    suffix: '+',
+    label: 'Technologies Used',
+    color: 'coral',
+  },
+  {
+    count: 2,
+    suffix: '',
+    label: 'Tech Stacks (MERN & Laravel)',
+    color: 'mint',
+  },
+  {
+    count: 100,
+    suffix: '%',
+    label: 'Commitment to Learning',
+    color: 'coral',
+  },
 ];
