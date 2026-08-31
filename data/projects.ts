@@ -48,10 +48,9 @@ export const projectsData: ProjectItem[] = [
       'Stripe',
       'Tailwind CSS',
     ],
-    techSummary:
-      'React • Node.js • Express • MongoDB • JWT • Stripe',
-    githubUrl: 'https://github.com/dev-habibhossain/tourasia',
-    liveUrl: '#',
+    techSummary: 'React • Node.js • Express • MongoDB • JWT • Stripe',
+    githubUrl: 'https://github.com/dev-habibhossain/assignment-12-client',
+    liveUrl: 'https://assignment-12-88347.web.app/',
     image: '',
   },
 
@@ -63,19 +62,11 @@ export const projectsData: ProjectItem[] = [
     badgeLabel: 'Next.js',
     description:
       'A hotel booking and management platform with room reservations, authentication, and an intuitive admin dashboard.',
-    features:
-      'Room Booking • Admin Dashboard • Authentication • Responsive UI',
-    techTags: [
-      'Next.js',
-      'TypeScript',
-      'MongoDB',
-      'Tailwind CSS',
-      'NextAuth',
-    ],
-    techSummary:
-      'Next.js • TypeScript • MongoDB • NextAuth',
-    githubUrl: 'https://github.com/DevHabib',
-    liveUrl: '#',
+    features: 'Room Booking • Admin Dashboard • Authentication • Responsive UI',
+    techTags: ['Next.js', 'TypeScript', 'MongoDB', 'Tailwind CSS', 'NextAuth'],
+    techSummary: 'Next.js • TypeScript • MongoDB • NextAuth',
+    githubUrl: 'https://github.com/dev-habibhossain/SuiteTrack-Project',
+    liveUrl: 'https://suite-track-project.vercel.app/',
     image: '',
   },
 
@@ -89,16 +80,9 @@ export const projectsData: ProjectItem[] = [
       'A modern multi-vendor e-commerce application featuring merchant management, product catalog, shopping cart, and secure online payments.',
     features:
       'Merchant Dashboard • Product Management • Shopping Cart • Stripe',
-    techTags: [
-      'PHP',
-      'Laravel',
-      'Vue.js',
-      'MySQL',
-      'Stripe',
-    ],
-    techSummary:
-      'Laravel • Vue.js • MySQL • Stripe',
-    githubUrl: 'https://github.com/DevHabib',
+    techTags: ['PHP', 'Laravel', 'Vue.js', 'MySQL', 'Stripe'],
+    techSummary: 'Laravel • Vue.js • MySQL • Stripe',
+    githubUrl: 'https://github.com/dev-habibhossain/ShopEase',
     liveUrl: '#',
     image: '/shopEase.png',
   },
@@ -111,19 +95,11 @@ export const projectsData: ProjectItem[] = [
     badgeLabel: 'MERN',
     description:
       'A tourism platform where users can browse destinations, book tour packages, and manage travel experiences.',
-    features:
-      'Tour Packages • Booking • Authentication • User Dashboard',
-    techTags: [
-      'React',
-      'Node.js',
-      'Express.js',
-      'MongoDB',
-      'Firebase',
-    ],
-    techSummary:
-      'React • Express • MongoDB • Firebase',
-    githubUrl: 'https://github.com/DevHabib',
-    liveUrl: '#',
+    features: 'Tour Packages • Booking • Authentication • User Dashboard',
+    techTags: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Firebase'],
+    techSummary: 'React • Express • MongoDB • Firebase',
+    githubUrl: 'https://github.com/dev-habibhossain/assignment-10-client',
+    liveUrl: 'https://assingment-10-a996f.web.app/',
     image: '/TourAsia.png',
   },
 
@@ -135,41 +111,13 @@ export const projectsData: ProjectItem[] = [
     badgeLabel: 'React',
     description:
       'An online gadget store with product browsing, filtering, shopping cart, and responsive shopping experience.',
-    features:
-      'Product Search • Categories • Shopping Cart • Responsive Design',
-    techTags: [
-      'React',
-      'Tailwind CSS',
-      'Firebase',
-      'REST API',
-    ],
-    techSummary:
-      'React • Tailwind CSS • Firebase',
-    githubUrl: 'https://github.com/DevHabib',
-    liveUrl: '#',
+    features: 'Product Search • Categories • Shopping Cart • Responsive Design',
+    techTags: ['React', 'Tailwind CSS', 'Firebase', 'REST API'],
+    techSummary: 'React • Tailwind CSS • Firebase',
+    githubUrl: 'https://github.com/dev-habibhossain/Supreme-Gadgets-client',
+    liveUrl: 'https://supreme-gadgets-ab56c.web.app/',
     image: '',
   },
 
-  {
-    id: 'greenguide',
-    title: 'GreenGuide',
-    subtitle: 'Sustainability Platform',
-    category: 'MERN / Next',
-    badgeLabel: 'Community',
-    description:
-      'A community-driven platform promoting sustainable living through eco-friendly resources, tips, and educational content.',
-    features:
-      'Community Resources • Articles • Responsive Design',
-    techTags: [
-      'React',
-      'Tailwind CSS',
-      'Firebase',
-    ],
-    techSummary:
-      'React • Tailwind CSS • Firebase',
-    githubUrl: 'https://github.com/DevHabib',
-    liveUrl: '#',
-    image: '',
-  },
 ];
 
