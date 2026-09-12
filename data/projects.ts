@@ -29,46 +29,46 @@ export const projectCategories: ProjectCategory[] = [
 ];
 
 export const projectsData: ProjectItem[] = [
-  {
-    id: 'metoffice',
-    title: 'MetOffice',
-    subtitle: 'Employee Management System',
-    category: 'MERN / Next',
-    badgeLabel: 'Featured',
-    description:
-      'A full-stack employee management platform with role-based dashboards, authentication, payroll, and employee workflow management.',
-    features:
-      'Role-Based Dashboard • JWT Auth • Stripe Payments • Employee Management',
-    techTags: [
-      'React',
-      'Node.js',
-      'Express.js',
-      'MongoDB',
-      'JWT',
-      'Stripe',
-      'Tailwind CSS',
-    ],
-    techSummary: 'React • Node.js • Express • MongoDB • JWT • Stripe',
-    githubUrl: 'https://github.com/dev-habibhossain/assignment-12-client',
-    liveUrl: 'https://assignment-12-88347.web.app/',
-    image: '',
-  },
+  // {
+  //   id: 'metoffice',
+  //   title: 'MetOffice',
+  //   subtitle: 'Employee Management System',
+  //   category: 'MERN / Next',
+  //   badgeLabel: 'Featured',
+  //   description:
+  //     'A full-stack employee management platform with role-based dashboards, authentication, payroll, and employee workflow management.',
+  //   features:
+  //     'Role-Based Dashboard • JWT Auth • Stripe Payments • Employee Management',
+  //   techTags: [
+  //     'React',
+  //     'Node.js',
+  //     'Express.js',
+  //     'MongoDB',
+  //     'JWT',
+  //     'Stripe',
+  //     'Tailwind CSS',
+  //   ],
+  //   techSummary: 'React • Node.js • Express • MongoDB • JWT • Stripe',
+  //   githubUrl: 'https://github.com/dev-habibhossain/assignment-12-client',
+  //   liveUrl: 'https://assignment-12-88347.web.app/',
+  //   image: '',
+  // },
 
-  {
-    id: 'suitetrack',
-    title: 'SuiteTrack',
-    subtitle: 'Hotel Management Platform',
-    category: 'MERN / Next',
-    badgeLabel: 'Next.js',
-    description:
-      'A hotel booking and management platform with room reservations, authentication, and an intuitive admin dashboard.',
-    features: 'Room Booking • Admin Dashboard • Authentication • Responsive UI',
-    techTags: ['Next.js', 'TypeScript', 'MongoDB', 'Tailwind CSS', 'NextAuth'],
-    techSummary: 'Next.js • TypeScript • MongoDB • NextAuth',
-    githubUrl: 'https://github.com/dev-habibhossain/SuiteTrack-Project',
-    liveUrl: 'https://suite-track-project.vercel.app/',
-    image: '',
-  },
+  // {
+  //   id: 'suitetrack',
+  //   title: 'SuiteTrack',
+  //   subtitle: 'Hotel Management Platform',
+  //   category: 'MERN / Next',
+  //   badgeLabel: 'Next.js',
+  //   description:
+  //     'A hotel booking and management platform with room reservations, authentication, and an intuitive admin dashboard.',
+  //   features: 'Room Booking • Admin Dashboard • Authentication • Responsive UI',
+  //   techTags: ['Next.js', 'TypeScript', 'MongoDB', 'Tailwind CSS', 'NextAuth'],
+  //   techSummary: 'Next.js • TypeScript • MongoDB • NextAuth',
+  //   githubUrl: 'https://github.com/dev-habibhossain/SuiteTrack-Project',
+  //   liveUrl: 'https://suite-track-project.vercel.app/',
+  //   image: '',
+  // },
 
   {
     id: 'shopease',
@@ -103,21 +103,21 @@ export const projectsData: ProjectItem[] = [
     image: '/TourAsia.png',
   },
 
-  {
-    id: 'supreme-gadgets',
-    title: 'Supreme Gadgets',
-    subtitle: 'E-Commerce Store',
-    category: 'MERN / Next',
-    badgeLabel: 'React',
-    description:
-      'An online gadget store with product browsing, filtering, shopping cart, and responsive shopping experience.',
-    features: 'Product Search • Categories • Shopping Cart • Responsive Design',
-    techTags: ['React', 'Tailwind CSS', 'Firebase', 'REST API'],
-    techSummary: 'React • Tailwind CSS • Firebase',
-    githubUrl: 'https://github.com/dev-habibhossain/Supreme-Gadgets-client',
-    liveUrl: 'https://supreme-gadgets-ab56c.web.app/',
-    image: '',
-  },
+  // {
+  //   id: 'supreme-gadgets',
+  //   title: 'Supreme Gadgets',
+  //   subtitle: 'E-Commerce Store',
+  //   category: 'MERN / Next',
+  //   badgeLabel: 'React',
+  //   description:
+  //     'An online gadget store with product browsing, filtering, shopping cart, and responsive shopping experience.',
+  //   features: 'Product Search • Categories • Shopping Cart • Responsive Design',
+  //   techTags: ['React', 'Tailwind CSS', 'Firebase', 'REST API'],
+  //   techSummary: 'React • Tailwind CSS • Firebase',
+  //   githubUrl: 'https://github.com/dev-habibhossain/Supreme-Gadgets-client',
+  //   liveUrl: 'https://supreme-gadgets-ab56c.web.app/',
+  //   image: '',
+  // },
 
 ];
 

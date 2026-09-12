@@ -1,37 +1,37 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import Image from "next/image";
-import { Play, Download } from "lucide-react";
-import { ResumeModal } from "./ResumeModal";
-import { GitHubIcon } from "./icons/GitHubIcon";
-import { LinkedInIcon } from "./icons/LinkedInIcon";
-import { contactInfoData, personalInfo } from "@/data";
-import heroImage from "@/public/no-bg-habib.png";
+import { contactInfoData, personalInfo } from '@/data';
+import heroImage from '@/public/no-bg-habib.png';
+import { Download, Play } from 'lucide-react';
+import Image from 'next/image';
+import { GitHubIcon } from './icons/GitHubIcon';
+import { LinkedInIcon } from './icons/LinkedInIcon';
 
 export function Hero() {
-  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
-
   return (
     <>
       <section
         id="home"
-        className="relative w-full max-w-7xl mx-auto px-8 pt-10 pb-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
+        className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 px-8 pt-10 pb-20 lg:grid-cols-12"
       >
         {/* Hero Text (Left) */}
-        <div className="lg:col-span-5 space-y-6 relative z-10" data-aos="fade-right">
-          <div className="w-16 h-12 bg-grid-dots absolute -top-8 -left-6 -z-10" />
+        <div
+          className="relative z-10 space-y-6 lg:col-span-5"
+          data-aos="fade-right"
+        >
+          <div className="bg-grid-dots absolute -top-8 -left-6 -z-10 h-12 w-16" />
 
-          <span className="inline-block px-3 py-1 bg-brand-mint-light text-brand-mint font-bold text-xs rounded-full uppercase tracking-wider border border-brand-mint/20">
+          <span className="bg-brand-mint-light text-brand-mint border-brand-mint/20 inline-block rounded-full border px-3 py-1 text-xs font-bold tracking-wider uppercase">
             {personalInfo.badgeLabel}
           </span>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-extrabold text-gray-900 dark:text-white leading-[1.12] tracking-tight">
-            {personalInfo.name}<br />
+          <h1 className="text-4xl leading-[1.12] font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-[54px] dark:text-white">
+            {personalInfo.name}
+            <br />
             <span className="text-brand-mint">{personalInfo.title}</span>
           </h1>
 
-          <p className="text-brand-muted text-sm sm:text-base leading-relaxed max-w-md">
+          <p className="text-brand-muted max-w-md text-sm leading-relaxed sm:text-base">
             {personalInfo.shortBio}
           </p>
 
@@ -39,13 +39,13 @@ export function Hero() {
           <div className="flex items-center space-x-4 pt-3">
             <a
               href="#contact"
-              className="bg-brand-mint text-white font-semibold text-sm px-8 py-3.5 rounded-md hover:bg-brand-mint-dark transition shadow-md shadow-emerald-950/20"
+              className="bg-brand-mint hover:bg-brand-mint-dark rounded-md px-8 py-3.5 text-sm font-semibold text-white shadow-md shadow-emerald-950/20 transition"
             >
               Hire Me
             </a>
             <a
               href="#projects"
-              className="bg-brand-coral-light text-brand-coral border border-brand-coral/20 font-semibold text-sm px-8 py-3.5 rounded-md hover:bg-brand-coral/20 transition"
+              className="bg-brand-coral-light text-brand-coral border-brand-coral/20 hover:bg-brand-coral/20 rounded-md border px-8 py-3.5 text-sm font-semibold transition"
             >
               My Projects
             </a>
@@ -53,10 +53,13 @@ export function Hero() {
         </div>
 
         {/* Hero Graphic Stack (Right) */}
-        <div className="lg:col-span-7 flex justify-center relative" data-aos="fade-left">
+        <div
+          className="relative flex justify-center lg:col-span-7"
+          data-aos="fade-left"
+        >
           {/* Animated Vector Spiral SVG Shape */}
           <svg
-            className="absolute -top-10 left-10 w-[380px] h-[380px] sm:w-[460px] sm:h-[460px] text-brand-mint/20 pointer-events-none -z-10 animate-float"
+            className="text-brand-mint/20 animate-float pointer-events-none absolute -top-10 left-10 -z-10 h-[380px] w-[380px] sm:h-[460px] sm:w-[460px]"
             viewBox="0 0 200 200"
           >
             <path
@@ -68,20 +71,20 @@ export function Hero() {
             />
           </svg>
 
-          <div className="relative w-[310px] h-[360px] sm:w-[380px] sm:h-[430px] flex items-center justify-center">
+          <div className="relative flex h-[360px] w-[310px] items-center justify-center sm:h-[430px] sm:w-[380px]">
             {/* Animated Floating Coral Card Background */}
             <div
-              className="absolute inset-0 bg-brand-coral/80 rounded-[50px] transform -rotate-3 animate-float"
-              style={{ animationDelay: "-1s" }}
+              className="bg-brand-coral/80 animate-float absolute inset-0 -rotate-3 transform rounded-[50px]"
+              style={{ animationDelay: '-1s' }}
             />
             {/* Animated Floating Mint Accent Box */}
             <div
-              className="absolute -bottom-4 -right-4 w-32 h-32 bg-brand-mint rounded-[35px] -z-10 animate-float"
-              style={{ animationDelay: "-3s" }}
+              className="bg-brand-mint animate-float absolute -right-4 -bottom-4 -z-10 h-32 w-32 rounded-[35px]"
+              style={{ animationDelay: '-3s' }}
             />
 
             {/* HERO PORTRAIT IMAGE */}
-            <div className="relative z-10 w-full h-[112%] overflow-hidden rounded-b-[50px] transform -translate-y-3">
+            <div className="relative z-10 h-[112%] w-full -translate-y-3 transform overflow-hidden rounded-b-[50px]">
               <Image
                 src={heroImage}
                 alt="Habib Hossain Hero"
@@ -99,55 +102,52 @@ export function Hero() {
               href={contactInfoData.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="glass absolute left-4 top-6 hidden sm:flex animate-float items-center gap-2 rounded-2xl px-3 py-1.5 text-xs font-semibold shadow-lg z-20 text-gray-900 dark:text-white hover:text-brand-mint transition"
+              className="glass animate-float hover:text-brand-mint absolute top-6 left-4 z-20 hidden items-center gap-2 rounded-2xl px-3 py-1.5 text-xs font-semibold text-gray-900 shadow-lg transition sm:flex dark:text-white"
             >
-              <GitHubIcon className="h-4 w-4 text-brand-mint" /> GitHub
+              <GitHubIcon className="text-brand-mint h-4 w-4" /> GitHub
             </a>
             <a
               href={contactInfoData.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="glass absolute right-4 top-20 hidden sm:flex animate-float items-center gap-2 rounded-2xl px-3 py-1.5 text-xs font-semibold shadow-lg z-20 text-gray-900 dark:text-white hover:text-brand-coral transition"
-              style={{ animationDelay: "-2s" }}
+              className="glass animate-float hover:text-brand-coral absolute top-20 right-4 z-20 hidden items-center gap-2 rounded-2xl px-3 py-1.5 text-xs font-semibold text-gray-900 shadow-lg transition sm:flex dark:text-white"
+              style={{ animationDelay: '-2s' }}
             >
-              <LinkedInIcon className="h-4 w-4 text-brand-coral" /> LinkedIn
+              <LinkedInIcon className="text-brand-coral h-4 w-4" /> LinkedIn
             </a>
 
             {/* HERO BUTTON WITH MANGA/THOUGHT SPEECH BUBBLE */}
             <div className="absolute -bottom-10 -left-6 z-20 flex flex-col items-center">
               {/* Speech Bubble */}
-              <div className="bg-brand-coral text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg border border-white/20 animate-bounceSlow mb-1 flex items-center gap-1 relative">
+              <div className="bg-brand-coral animate-bounceSlow relative mb-1 flex items-center gap-1 rounded-full border border-white/20 px-3 py-1 text-[10px] font-bold text-white shadow-lg">
                 <span>Get My Resume!</span>
-                <div className="w-1.5 h-1.5 bg-brand-coral rotate-45 absolute -bottom-0.5 left-1/2 -translate-x-1/2" />
+                <div className="bg-brand-coral absolute -bottom-0.5 left-1/2 h-1.5 w-1.5 -translate-x-1/2 rotate-45" />
               </div>
 
               {/* Interactive Play + Download Button */}
-              <div className="bg-white dark:bg-brand-darkCard border border-gray-200 dark:border-gray-700 backdrop-blur-md p-2 rounded-[28px] shadow-xl">
-                <button
-                  onClick={() => setIsResumeModalOpen(true)}
-                  title="Download Resume Options"
-                  aria-label="Open Resume Options Modal"
-                  className="relative w-16 h-16 bg-brand-mint text-white rounded-[22px] flex items-center justify-center shadow-lg hover:scale-105 transition"
+              <div className="dark:bg-brand-darkCard rounded-[28px] border border-gray-200 bg-white p-2 shadow-xl backdrop-blur-md dark:border-gray-700">
+                <a
+                  href={personalInfo.laravelResumeUrl}
+                  download="Habib_Hossain_Laravel_Developer_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Download Habib Hossain Resume"
+                  aria-label="Download Habib Hossain Resume"
+                  className="bg-brand-mint relative flex h-16 w-16 cursor-pointer items-center justify-center rounded-[22px] text-white shadow-lg transition hover:scale-105"
                 >
-                  <Play className="w-6 h-6 fill-current ml-1" />
+                  <Play className="ml-1 h-6 w-6 fill-current" />
                   {/* Small Download Overlay Icon */}
-                  <span className="absolute -bottom-1 -right-1 w-6 h-6 bg-brand-coral text-white rounded-full flex items-center justify-center border-2 border-white dark:border-brand-darkCard shadow-md">
-                    <Download className="w-3 h-3" />
+                  <span className="bg-brand-coral dark:border-brand-darkCard absolute -right-1 -bottom-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-white text-white shadow-md">
+                    <Download className="h-3 w-3" />
                   </span>
-                </button>
+                </a>
               </div>
             </div>
           </div>
 
-          <div className="w-24 h-24 bg-grid-dots absolute bottom-0 right-4 sm:right-12 -z-10" />
+          <div className="bg-grid-dots absolute right-4 bottom-0 -z-10 h-24 w-24 sm:right-12" />
         </div>
       </section>
-
-      {/* Resume Modal */}
-      <ResumeModal
-        isOpen={isResumeModalOpen}
-        onClose={() => setIsResumeModalOpen(false)}
-      />
     </>
   );
 }
