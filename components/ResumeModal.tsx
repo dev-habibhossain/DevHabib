@@ -1,37 +1,39 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import { createPortal } from "react-dom";
-import { X, FileText, Download } from "lucide-react";
-import { personalInfo } from "@/data";
+import { personalInfo } from '@/data';
+import { Download, FileText, X } from 'lucide-react';
+import { useEffect, useSyncExternalStore } from 'react';
+import { createPortal } from 'react-dom';
 
 interface ResumeModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-export function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
-  const [mounted, setMounted] = useState(false);
+const emptySubscribe = () => () => {};
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+export function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
+  const mounted = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === 'Escape') onClose();
     };
 
     if (isOpen) {
-      document.body.style.overflow = "hidden";
-      window.addEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleKeyDown);
     } else {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = 'unset';
     }
 
     return () => {
-      document.body.style.overflow = "unset";
-      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = 'unset';
+      window.removeEventListener('keydown', handleKeyDown);
     };
   }, [isOpen, onClose]);
 
@@ -39,64 +41,67 @@ export function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
 
   return createPortal(
     <div
-      className="fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity"
+      className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm transition-opacity"
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-xl bg-white dark:bg-[#111827] border border-gray-200 dark:border-[#1f2937] rounded-3xl p-8 shadow-2xl space-y-6 z-[100000] animate-modal-pop"
+        className="animate-modal-pop relative z-[100000] w-full max-w-xl space-y-6 rounded-3xl border border-gray-200 bg-white p-8 shadow-2xl dark:border-[#1f2937] dark:bg-[#111827]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 w-9 h-9 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500 hover:text-gray-900 dark:hover:text-white flex items-center justify-center transition cursor-pointer"
+          className="absolute top-6 right-6 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-gray-100 text-gray-500 transition hover:text-gray-900 dark:bg-gray-800 dark:hover:text-white"
           aria-label="Close Modal"
         >
-          <X className="w-5 h-5" />
+          <X className="h-5 w-5" />
         </button>
 
         <div>
-          <div className="inline-block px-3 py-1 bg-brand-mint/10 text-brand-mint font-bold text-xs rounded-full uppercase tracking-wider mb-2">
+          <div className="bg-brand-mint/10 text-brand-mint mb-2 inline-block rounded-full px-3 py-1 text-xs font-bold tracking-wider uppercase">
             Resume Downloads
           </div>
           <h3 className="text-2xl font-extrabold text-gray-900 dark:text-white">
             Select Resume Version
           </h3>
-          <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+          <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
             Choose the stack-focused resume that best matches your opportunity.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {/* MERN Stack Resume */}
-          <div className="gcard glass p-6 rounded-2xl border border-gray-100 dark:border-[#1f2937] flex flex-col justify-between space-y-4 hover:border-brand-mint transition">
+          <div className="gcard glass hover:border-brand-mint flex flex-col justify-between space-y-4 rounded-2xl border border-gray-100 p-6 transition dark:border-[#1f2937]">
             <div className="space-y-2">
-              <div className="w-10 h-10 rounded-xl bg-brand-mint/10 text-brand-mint flex items-center justify-center">
-                <FileText className="w-5 h-5" />
+              <div className="bg-brand-mint/10 text-brand-mint flex h-10 w-10 items-center justify-center rounded-xl">
+                <FileText className="h-5 w-5" />
               </div>
-              <h4 className="font-bold text-base text-gray-900 dark:text-white">
+              <h4 className="text-base font-bold text-gray-900 dark:text-white">
                 MERN Stack Resume
               </h4>
               <p className="text-xs text-gray-500 dark:text-gray-400">
-                Focused on React, Next.js, Node.js, Express & MongoDB development.
+                Focused on React, Next.js, Node.js, Express & MongoDB
+                development.
               </p>
             </div>
             <a
-              href={personalInfo.mernResumeUrl}
-              download
-              className="inline-flex items-center justify-center gap-2 bg-brand-mint text-white text-xs font-semibold px-4 py-2.5 rounded-xl hover:bg-brand-mint-dark transition shadow-sm cursor-pointer"
+              href={personalInfo.mernResumeUrl || personalInfo.laravelResumeUrl}
+              download="Habib_Hossain_Laravel_Developer_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-brand-mint hover:bg-brand-mint-dark inline-flex cursor-pointer items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-xs font-semibold text-white shadow-sm transition"
             >
-              <Download className="w-4 h-4" /> Download PDF
+              <Download className="h-4 w-4" /> Download PDF
             </a>
           </div>
 
           {/* PHP Laravel Resume */}
-          <div className="gcard glass p-6 rounded-2xl border border-gray-100 dark:border-[#1f2937] flex flex-col justify-between space-y-4 hover:border-brand-coral transition">
+          <div className="gcard glass hover:border-brand-coral flex flex-col justify-between space-y-4 rounded-2xl border border-gray-100 p-6 transition dark:border-[#1f2937]">
             <div className="space-y-2">
-              <div className="w-10 h-10 rounded-xl bg-brand-coral/10 text-brand-coral flex items-center justify-center">
-                <FileText className="w-5 h-5" />
+              <div className="bg-brand-coral/10 text-brand-coral flex h-10 w-10 items-center justify-center rounded-xl">
+                <FileText className="h-5 w-5" />
               </div>
-              <h4 className="font-bold text-base text-gray-900 dark:text-white">
+              <h4 className="text-base font-bold text-gray-900 dark:text-white">
                 PHP Laravel Resume
               </h4>
               <p className="text-xs text-gray-500 dark:text-gray-400">
@@ -105,10 +110,12 @@ export function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
             </div>
             <a
               href={personalInfo.laravelResumeUrl}
-              download
-              className="inline-flex items-center justify-center gap-2 bg-brand-coral text-white text-xs font-semibold px-4 py-2.5 rounded-xl hover:bg-red-500 transition shadow-sm cursor-pointer"
+              download="Habib_Hossain_Laravel_Developer_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-brand-coral inline-flex cursor-pointer items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-xs font-semibold text-white shadow-sm transition hover:bg-red-500"
             >
-              <Download className="w-4 h-4" /> Download PDF
+              <Download className="h-4 w-4" /> Download PDF
             </a>
           </div>
         </div>
